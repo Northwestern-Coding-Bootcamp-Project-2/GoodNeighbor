@@ -1,4 +1,6 @@
-/*Setting up */
+/*======================
+        COLORS
+======================*/
 :root{
     --dark-green: #264653;
     --green: #2A9D8F;
@@ -8,6 +10,11 @@
     --white: #fff;
     --black: #000;
 }
+
+/*=====================
+        FONTS
+=====================*/
+
 /*This set 1 rem to 10px instead of it being 16px so now 1.6 rem is now 16px*/
 html{
     font-size: 62.5%;
@@ -74,9 +81,35 @@ p {
 }
 
 /*======================
+        HOMEPAGE
+======================*/
+.background-image-container{
+    padding: 0rem;
+    margin: 0rem;
+}
+.background-image{
+    background-image: url(../img/helpinghand.jpg);
+    width: 100vw;
+    height: 100vh;
+}
+
+/*======================
         FOOTER
 ======================*/
 
 footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
     background-color: var(--dark-green);
+}
+footer p{
+    color: var(--white);
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top: 1rem;
 }
