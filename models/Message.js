@@ -14,23 +14,24 @@ Message.init(
       autoIncrement: true,
     },
     sender_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
     recipient_id: {
-      type: DataTypes.STRING,
+      type: DataTypes.INTEGER,
       allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
+      references: {
+        model: 'user',
+        key: 'id',
       },
     },
     text: {
       type: DataTypes.STRING,
       allowNull: false,
-      validate: {
-        len: [6],
-      },
     },
     image_link: {
         type: DataTypes.STRING,
