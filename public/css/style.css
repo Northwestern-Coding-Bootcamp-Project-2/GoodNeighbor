@@ -1,11 +1,12 @@
 /*Setting up */
 :root{
-    --color-1: #011627;
-    --color-2: #FB4D3D;
-    --color-3: #547AA5;
-    --color-4: #C5C9A4;
-    --color-5: #627C85;
-    --color-font: #fff;
+    --dark-green: #264653;
+    --green: #2A9D8F;
+    --yellow: #E9C46A;
+    --orange: #F4A261;
+    --red: #E76F51;
+    --white: #fff;
+    --black: #000;
 }
 /*This set 1 rem to 10px instead of it being 16px so now 1.6 rem is now 16px*/
 html{
@@ -43,8 +44,39 @@ p {
     font-weight: 300;
 }
 
+/*===================
+      NAVIGATION
+====================*/
 
+.navbar{
+    background: var(--dark-green);
+}
+.navbar-items{
+    padding: 0rem 4rem;
+}
+.navbar-brand{
+    color: var(--white);
+}
+.navbar-brand:hover{
+    color: var(--orange);
+    text-decoration: none;
+}
+.navbar-nav li{
+    padding: 1rem 1rem;
+}
+.navbar-nav li a{
+    color: var(--white);
+    text-transform: uppercase;
+}
+.navbar-nav li a:hover{
+    color: var(--orange);
+    text-decoration: none;
+}
 
+/*======================
+        FOOTER
+======================*/
 
-
-
+footer{
+    background-color: var(--dark-green);
+}
