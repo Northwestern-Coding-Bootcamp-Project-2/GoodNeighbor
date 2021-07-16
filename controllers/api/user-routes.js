@@ -1,3 +1,4 @@
+
 const router = require('express').Router();
 const { User } = require('../../models');
 const { Message } = require('../../models');
@@ -93,4 +94,4 @@ router.delete('/profile', withAuth, async (req, res) => {
       res.status(500).json(err);
     }
 });
-  
+
