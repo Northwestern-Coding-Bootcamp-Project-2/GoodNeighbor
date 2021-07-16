@@ -1,0 +1,50 @@
+/*Setting up */
+:root{
+    --color-1: #011627;
+    --color-2: #FB4D3D;
+    --color-3: #547AA5;
+    --color-4: #C5C9A4;
+    --color-5: #627C85;
+    --color-font: #fff;
+}
+/*This set 1 rem to 10px instead of it being 16px so now 1.6 rem is now 16px*/
+html{
+    font-size: 62.5%;
+}
+/*Setting up the h1 - h6 tags with the font-sizes*/
+h1 {
+    font-size: 4rem;
+    font-family: 'Open Sans';
+}
+h2 {
+    font-size: 3.5rem;
+    font-family: 'Open Sans';
+}
+h3 {
+    font-size: 3rem;
+    font-family: 'Open Sans';
+}
+h4 {
+    font-size: 2.5rem;
+    font-family: 'Open Sans';
+}
+h5 {
+    font-size: 2rem;
+    font-family: 'Open Sans';
+}
+h6 {
+    font-size: 1.5rem;
+    font-family: 'Open Sans';
+} 
+p {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-family: 'Open Sans';
+    font-weight: 300;
+}
+
+
+
+
+
+
