@@ -1,146 +1,146 @@
 [
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"charlie01",
+        "email": "charlie09@gmail.com",
+        "password": "charlie09",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "1"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"mikey02",
+        "email": "mikey02@gmail.com",
+        "password": "mikey02",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "1"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"johnny03",
+        "email": "johnny03@gmail.com",
+        "password": "johnny03",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "1"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"michelle04",
+        "email": "michelle04@gmail.com",
+        "password": "michelle04",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "2"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"sean05",
+        "email": "sean05@gmail.com",
+        "password": "sean05",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "2"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"jerome06",
+        "email": "jerome06@gmail.com",
+        "password": "jerome06",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "2"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"john07",
+        "email": "john07@gmail.com",
+        "password": "john07",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "3"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"alisha08",
+        "email": "alisha08@gmail.com",
+        "password": "alisha08",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "3"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"shari09",
+        "email": "shari09@gmail.com",
+        "password": "shari09",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "3"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"duane10",
+        "email": "duane10@gmail.com",
+        "password": "duane10",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "4"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"clarissa11",
+        "email": "clarissa11@gmail.com",
+        "password": "clarissa11",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "4"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"jane12",
+        "email": "jane12@gmail.com",
+        "password": "jane12",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "4"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"marit13",
+        "email": "marit13@gmail.com",
+        "password": "marit13",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "5"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"hariett14",
+        "email": "hariett14@gmail.com",
+        "password": "hariett14",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "5"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"tejesh15",
+        "email": "tejesh15@gmail.com",
+        "password": "tejesh15",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "5"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"kevin16",
+        "email": "kevin16@gmail.com",
+        "password": "kevin16",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "6"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"cullen17",
+        "email": "cullen17@gmail.com",
+        "password": "cullen17",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "6"
     },
     {
-        "username":"",
-        "email": "",
-        "password": "",
+        "username":"anna18",
+        "email": "anna18@gmail.com",
+        "password": "anna18",
         "pfp_link": "",
         "bio": "",
-        "location_id": ""
+        "location_id": "6"
     }
 ]
