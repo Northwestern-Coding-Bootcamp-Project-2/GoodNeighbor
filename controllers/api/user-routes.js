@@ -26,7 +26,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     }
 });
 
-router.get('/user', withAuth, async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
@@ -43,7 +43,7 @@ router.get('/user', withAuth, async (req, res) => {
     }
 });
 
-router.get('/user/:id', withAuth, async (req, res) => {
+router.get('/profile/:id', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.params.id, {
             attributes: { exclude: ['password'] },
@@ -60,7 +60,7 @@ router.get('/user/:id', withAuth, async (req, res) => {
     }
 });
 
-router.put('/user', withAuth, async (req, res) => {
+router.put('/profile', withAuth, async (req, res) => {
     try {
       const newUser = await User.update({
         ...req.body,
@@ -74,7 +74,7 @@ router.put('/user', withAuth, async (req, res) => {
   });
   
   
-router.delete('/user', withAuth, async (req, res) => {
+router.delete('/profile', withAuth, async (req, res) => {
     try {
       const userData = await User.destroy({
         where: {
