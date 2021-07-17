@@ -1,9 +1,7 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Message extends Model {
-
-}
+class Message extends Model {}
 
 Message.init(
   {
@@ -37,6 +35,8 @@ Message.init(
         type: DataTypes.STRING,
         allowNull: true,
     },
+  },
+  {
     sequelize,
     timestamps: false,
     freezeTableName: true,
