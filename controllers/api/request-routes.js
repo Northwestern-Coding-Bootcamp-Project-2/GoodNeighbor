@@ -1,4 +1,4 @@
-const router = require('express').Router();
+const Router = require('express').Router();
 const { User } = require('../../models');
 const { Request } = require('../../models')
 
@@ -32,11 +32,12 @@ router.get('/:id', withAuth, async (req, res) => {
 
         const request = requestData.get({ plain: true });
 
-        res.render('messages', {
-            ...requests,
+        res.render('request', {
+            ...request,
             logged_in: true
         });
     } catch (err) {
         res.status(500).json(err);
     }
 });
+
