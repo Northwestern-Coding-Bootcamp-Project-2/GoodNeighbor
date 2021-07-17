@@ -49,8 +49,8 @@ if (username && email && password) {
 
 document
 .querySelector('.login-form')
-.addEventListener('submit', loginFormHandler);
+.addEventListener('click', loginFormHandler);
 
 document
-.querySelector('.signup-form')
-.addEventListener('submit', signupFormHandler);
+.querySelector('#signup-submit')
+.addEventListener('click', signupFormHandler);
