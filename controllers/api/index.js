@@ -1,13 +1,11 @@
 const router = require('express').Router();
 const userRoutes = require('./user-routes');
-const starredRoutes = require('/starred-request-routes');
-const messageRoutes = require('/message-routes')
-const locationRoutes = require('/location-routes')
-const requestRoutes = require('/request-routes')
-const signupRoutes = require('/sign-up-routes')
-const loginRoutes = require('/login-routes')
-
-
+const starredRoutes = require('./starred-request-routes');
+const messageRoutes = require('./message-routes');
+const locationRoutes = require('./location-routes');
+const requestRoutes = require('./request-routes');
+const signupRoutes = require('./sign-up-routes');
+const loginRoutes = require('./login-routes');
 
 router.use('/users', userRoutes);
 router.use('/starred', starredRoutes);
