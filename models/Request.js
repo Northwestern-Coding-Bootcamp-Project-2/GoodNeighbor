@@ -28,6 +28,10 @@ Request.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+        title: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
         image_link: {
             type: DataTypes.STRING,
             allowNull: true,
