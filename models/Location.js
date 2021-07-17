@@ -23,12 +23,14 @@ Location.init(
             type: DataTypes.STRING,
             allowNull: true,
         },
+    },
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
         modelName: 'location',
-    }
+    },
 );
 
 module.exports = Location;
