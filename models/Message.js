@@ -41,7 +41,7 @@ Message.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: 'message',
   });
 
 module.exports = Message;
