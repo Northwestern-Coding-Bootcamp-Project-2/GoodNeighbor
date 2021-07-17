@@ -2,6 +2,7 @@ const User = require('./User');
 const Request = require('./Request');
 const Message = require('./Message');
 const StarredRequest = require('./StarredRequest');
+const Location = require('./Location');
 
 Location.hasMany(User, {
   foreignKey: 'location_id',
