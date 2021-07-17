@@ -1,218 +1,254 @@
 [
     {
-        "message": "I need help with my brakes",
+        "title": "I need help with my brakes",
+        "text": "",
         "poster_id": "1",
         "image_link": "",
         "location_id": "1"
     },
     {
-        "message": "I need help with my my plumbing",
+        "title": "I need help with my my plumbing",
+        "text": "",
         "poster_id": "1",
         "image_link": "",
         "location_id": "1"
     },
     {
-        "message": "I need help with my back pain",
+        "title": "I need help with my back pain",
+        "text": "",
         "poster_id": "2",
         "image_link": "",
         "location_id": "1"
     },
     {
-        "message": "I need help babysitting",
+        "title": "I need help babysitting",
+        "text": "",
         "poster_id": "2",
         "image_link": "",
         "location_id": "1"
     },
     {
-        "message": "I need someone to do my lawn",
+        "title": "I need someone to do my lawn",
+        "text": "",
         "poster_id": "3",
         "image_link": "",
         "location_id": "1"
     },
     {
-        "message": "I need help with my AC",
+        "title": "I need help with my AC",
+        "text": "",
         "poster_id": "3",
         "image_link": "",
         "location_id": "1"
     },
     {
-        "message": "I need help setting my band up on gig day!",
+        "title": "I need help setting my band up on gig day!",
+        "text": "",
         "poster_id": "4",
         "image_link": "",
         "location_id": "2"
     },
     {
-        "message": "I need help tutoring my son",
+        "title": "I need help tutoring my son",
+        "text": "",
         "poster_id": "4",
         "image_link": "",
         "location_id": "2"
     },
     {
-        "message": "I need help finding an affordable desktop PC",
+        "title": "I need help finding an affordable desktop PC",
+        "text": "",
         "poster_id": "5",
         "image_link": "",
         "location_id": "3"
     },
     {
-        "message": "I need help fixing my garage door",
+        "title": "I need help fixing my garage door",
+        "text": "",
         "poster_id": "5",
         "image_link": "",
         "location_id": "3"
     },
     {
-        "message": "I need help redoing my porch",
+        "title": "I need help redoing my porch",
+        "text": "",
         "poster_id": "6",
         "image_link": "",
         "location_id": "3"
     },
     {
-        "message": "I need help with my plumbing",
+        "title": "I need help with my plumbing",
+        "text": "",
         "poster_id": "6",
         "image_link": "",
         "location_id": "3"
     },
     {
-        "message": "I need a tutor for statistics",
+        "title": "I need a tutor for statistics",
+        "text": "",
         "poster_id": "7",
         "image_link": "",
         "location_id": "4"
     },
     {
-        "message": "I need help with my daughter's 7th grade science homework",
+        "title": "I need help with my daughter's 7th grade science homework",
+        "text": "",
         "poster_id": "7",
         "image_link": "",
         "location_id": "4"
     },
     {
-        "message": "I need help finding a good mechanic",
+        "title": "I need help finding a good mechanic",
+        "text": "",
         "poster_id": "8",
         "image_link": "",
         "location_id": "4"
     },
     {
-        "message": "I need a personal chef for my birthday",
+        "title": "I need a personal chef for my birthday",
+        "text": "",
         "poster_id": "8",
         "image_link": "",
         "location_id": "4"
     },
     {
-        "message": "I need a Javascript tutor?",
+        "title": "I need a Javascript tutor?",
+        "text": "",
         "poster_id": "9",
         "image_link": "",
         "location_id": "4"
     },
     {
-        "message": "I need to change my car's oil",
+        "title": "I need to change my car's oil",
+        "text": "",
         "poster_id": "9",
         "image_link": "",
         "location_id": "4"
     },
     {
-        "message": "I need a hug",
+        "title": "I need a hug",
+        "text": "",
         "poster_id": "10",
         "image_link": "",
         "location_id": "5"
     },
     {
-        "message": "I need help finding my dog",
+        "title": "I need help finding my dog",
+        "text": "",
         "poster_id": "10",
         "image_link": "",
         "location_id": "5"
     },
     {
-        "message": "I need to paint my house",
+        "title": "I need to paint my house",
+        "text": "",
         "poster_id": "11",
         "image_link": "",
         "location_id": "5"
     },
     {
-        "message": "I need to find a babysitter!",
+        "title": "I need to find a babysitter!",
+        "text": "",
         "poster_id": "11",
         "image_link": "",
         "location_id": "5"
     },
     {
-        "message": "I need someone to do my hair please?",
+        "title": "I need someone to do my hair please?",
+        "text": "",
         "poster_id": "12",
         "image_link": "",
         "location_id": "5"
     },
     {
-        "message": "I need someone to make dinner for my grandmother",
+        "title": "I need someone to make dinner for my grandmother",
+        "text": "",
         "poster_id": "12",
         "image_link": "",
         "location_id": "5"
     },
     {
-        "message": "I need help with",
+        "title": "I need help stimulating my dog's anal glands",
+        "text": "",
         "poster_id": "13",
         "image_link": "",
         "location_id": "6"
     },
     {
-        "message": "I need help with",
+        "title": "Can someone help me train my dog???",
+        "text": "",
         "poster_id": "13",
         "image_link": "",
         "location_id": "6"
     },
     {
-        "message": "I need help with",
+        "title": "I need a professional massage",
+        "text": "",
         "poster_id": "14",
         "image_link": "",
         "location_id": "6"
     },
     {
-        "message": "I need help with",
+        "title": "Is anyone a physical trainer? WILL PAY!",
+        "text": "",
         "poster_id": "14",
         "image_link": "",
         "location_id": "6"
     },
     {
-        "message": "I need help with",
+        "title": "My daughter needs help with math!",
+        "text": "",
         "poster_id": "15",
         "image_link": "",
         "location_id": "6"
     },
     {
-        "message": "I need help with",
+        "title": "I need help with",
+        "text": "",
         "poster_id": "15",
         "image_link": "",
         "location_id": "6"
     },
     {
-        "message": "I need help with",
+        "title": "I need help with",
+        "text": "",
         "poster_id": "16",
         "image_link": "",
         "location_id": "1"
     },
     {
-        "message": "I need help with",
+        "title": "I need help with",
+        "text": "",
         "poster_id": "16",
         "image_link": "",
         "location_id": "2"
     },
     {
-        "message": "I need help with",
+        "title": "I need help with",
+        "text": "",
         "poster_id": "17",
         "image_link": "",
         "location_id": "3"
     },
     {
-        "message": "I need help with",
+        "title": "I need help with",
+        "text": "",
         "poster_id": "17",
         "image_link": "",
         "location_id": "4"
     },
     {
-        "message": "I need help with",
+        "title": "I need help with",
+        "text": "",
         "poster_id": "18",
         "image_link": "",
         "location_id": "5"
     },
     {
-        "message": "I need help with",
+        "title": "I need help with",
+        "text": "",
         "poster_id": "18",
         "image_link": "",
         "location_id": "6"
-    },
+    }
 ]
