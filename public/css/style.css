@@ -194,6 +194,70 @@ p {
 }
 
 /*======================
+        DASHBOARD
+======================*/
+.dashboard-container{
+    width: 85%;
+}
+.account-container{
+    display: flex;
+    padding: 4rem 4rem;
+}
+.account-information{
+    padding: 0rem 4rem;
+}
+.button-container{
+    text-align:center;
+}
+.button-container{
+    padding: 2rem 2rem;
+    margin: 0rem 2rem;
+    width: 100%;
+}
+.button-container a{
+    padding: 1rem 20rem;
+    margin: 0rem 4rem;
+}
+#make-request-btn{
+    background: var(--green);
+    color: var(--white);
+}
+#make-request-btn:hover{
+    background: var(--yellow);
+}
+#search-request-btn{
+    background: var(--red);
+    color: var(--white);
+}
+#search-request-btn:hover{
+    background: var(--yellow);
+}
+.request-container{
+    background: var(--orange);
+    padding: 4rem;
+    margin: 2rem 4rem;
+    height: 30vh;
+}
+.request-container h3{
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: underline;
+    color: var(--white);
+}
+.starred-container{
+    background: var(--green);
+    padding: 4rem;
+    margin: 2rem 4rem;
+    height: 30vh;
+}
+.starred-container h3{
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: underline;
+    color: var(--white);
+}
+
+/*======================
         FOOTER
 ======================*/
 
