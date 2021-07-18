@@ -2,22 +2,25 @@ const sequelize = require('../config/connection');
 const { User, Location, Message,  Request, StarredRequest } = require('../models');
 
 const userData = require('./userData.json');
+const messageData = require('./messageData.json');
+const requestData = require('./requestData.json');
+const starredRequestData = require('./starredRequestData.json');
 const locationData = require('./locationData.json');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
-
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
+  
+  await Location.bulkCreate(locationData, {
+      returning: true,
+    })
+    .then( User.bulkCreate(userData, {
+    // individualHooks: true,
     returning: true,
-  });
-
-  for (const Location of locationData) {
-    await Location.bulkcreate({
-      ...Location,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-    });
-  }
+    }).then( Message.bulkCreate(messageData, {
+      returning: true,
+    })).then( Request.bulkCreate(requestData, {
+      returning: true,
+    })));
 
   process.exit(0);
 };

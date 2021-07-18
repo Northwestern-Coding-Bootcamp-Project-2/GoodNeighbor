@@ -1,32 +1,38 @@
 [
     {
-        "zipcode": 60647,
         "city": "Chicago",
         "state": "Illinois"
     },
     {
-        "zipcode": 60616,
-        "city": "Chicago",
-        "state": "Illinois"
+        "city": "Houston",
+        "state": "Texas"
     },
     {
-        "zipcode": 60649,
-        "city": "Chicago",
-        "state": "Illinois"
+        "city": "Memphis",
+        "state": "Tennessee"
     },
     {
-        "zipcode": 60644,
-        "city": "Chicago",
-        "state": "Illinois"
+        "city": "Madison",
+        "state": "Wisconsin"
     },
     {
-        "zipcode": 60631,
-        "city": "Chicago",
-        "state": "Illinois"
+        "city": "Detroit",
+        "state": "Michigan"
     },
     {
-        "zipcode": 60660,
-        "city": "Chicago",
-        "state": "Illinois"
+        "city": "Los Angeles",
+        "state": "California"
+    },
+    {
+        "city": "Portland",
+        "state": "Oregon"
+    },
+    {
+        "city": "Manhattan",
+        "state": "New York"
+    },
+    {
+        "city": "Orlando",
+        "state": "Florida"
     }
 ]
