@@ -23,12 +23,12 @@ Request.belongsTo(Location, {
 });
 
 User.hasMany(Request, {
-  foreignKey: 'user_id',
+  foreignKey: 'poster_id',
   onDelete: 'CASCADE'
 });
 
 Request.belongsTo(User, {
-  foreignKey: 'user_id'
+  foreignKey: 'poster_id'
 });
 
 User.hasMany(Message, {
