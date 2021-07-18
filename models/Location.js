@@ -11,17 +11,13 @@ Location.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        zipcode: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        },
         city: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
         },
         state: {
             type: DataTypes.STRING,
-            allowNull: true,
+            allowNull: false,
         },
     },
     {
