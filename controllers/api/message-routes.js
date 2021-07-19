@@ -61,7 +61,7 @@ router.put('/:id', withAuth, async (req, res) => {
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-      const messageData = await User.destroy({
+      const messageData = await Message.destroy({
         where: {
           id:  req.params.id
         },
