@@ -50,5 +50,13 @@ const makeFormHandler = async (event) => {
         } else {
           alert(response.statusText);
         }
-      }
+    }
 }
+
+document
+  .querySelector('#submit-request-btn')
+  .addEventListener('click', makeFormHandler);
+
+document
+  .querySelector('#submit-search-btn')
+  .addEventListener('click', searchFormHandler);
