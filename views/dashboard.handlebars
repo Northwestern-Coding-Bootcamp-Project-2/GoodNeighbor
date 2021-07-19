@@ -15,8 +15,48 @@
         <div class = "row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="button-container">
-                    <a id="make-request-btn" href="">Make Request</a>
-                    <a id="search-request-btn" href="">Search Request</a>
+                    <div class="modal fade" id="request-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalToggleLabel">Request Form</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                 <form id="make-request-form">
+                                    <label for="title">Title</label><br>
+                                    <input type="text" id="title" name="title"><br>
+                                    <label for="text">Request Message:</label><br>
+                                    <input type="text" id="text" name="text"><br>
+                                    <label for="image-link">image link:</label><br>
+                                    <input type="text" id="image-link" name="image-link"><br>
+                                    <select id="drop-down" class="custom-select mr-sm-2" >
+                                     </select>
+                                    <input type="submit" id="submit-request-btn" name="submit-request-btn">
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="make-request-btn" class="btn btn-primary" data-bs-toggle="modal" href="#request-modal" role="button">Make Request</a>
+                      <div class="modal fade" id="request-modal-2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalToggleLabel">Search Request Form</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                 <form id="search-request-form">
+                                    <select id="drop-down-2" class="custom-select mr-sm-2" >
+                                     </select>
+                                    <input type="submit" id="submit-search-btn" name="submit-search-btn">
+                                </form>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="search-request-btn" class="btn btn-primary" data-bs-toggle="modal" href="#request-modal-2" role="button">Search Request</a>
                 </div>
             </div>
         </div>
@@ -36,3 +76,5 @@
         </div>
     </div>  
 </div>
+
+<script src="/js/dashboard.js"></script>

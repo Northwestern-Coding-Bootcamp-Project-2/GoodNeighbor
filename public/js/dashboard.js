@@ -1,4 +1,5 @@
-
+const dropDown = document.querySelector('#drop-down');
+const dropDownTwo = document.querySelector('#drop-down-2');
 
 async function locations() {
     const response = await fetch ('/api/signup');
@@ -7,13 +8,23 @@ async function locations() {
   }
   locations().then(data => {
     console.log(data);
-    for(i = 0; i < data.length; i++){
-      const option = document.createElement('option'); 
-      option.setAttribute('data-id', data[i].id);
-      option.innerHTML = `${data[i].city}, ${data[i].state}`;
-      dropDown.append(option);
-      console.log(option);
-    }
+      for(i = 0; i < data.length; i++){
+        const option = document.createElement('option'); 
+        option.setAttribute('data-id', data[i].id);
+        option.innerHTML = `${data[i].city}, ${data[i].state}`;
+        dropDown.append(option);
+        console.log(option);
+      }
+  });
+  locations().then(data => {
+    console.log(data);
+      for(i = 0; i < data.length; i++){
+        const option = document.createElement('option'); 
+        option.setAttribute('data-id', data[i].id);
+        option.innerHTML = `${data[i].city}, ${data[i].state}`;
+        dropDownTwo.append(option);
+        console.log(option);
+      }
   });
 
 const searchFormHandler = async (event) => {
@@ -35,13 +46,13 @@ const makeFormHandler = async (event) => {
     event.preventDefault();
     const title = document.querySelector('#title').value.trim();    
     const text = document.querySelector('#text').value.trim();
-    const imageLink = document.querySelector('#image-link').value.trim();
+    const image_link = document.querySelector('#image-link').value.trim();
     const location_id = dropDown.options[dropDown.selectedIndex].getAttribute('data-id');
 
-    if (title && text && imageLink) {
+    if (title && text && image_link) {
         const response = await fetch('/api/request', {
           method: 'POST',
-          body: JSON.stringify({ title, text, imageLink, location_id}),
+          body: JSON.stringify({ title, text, image_link, location_id}),
           headers: { 'Content-Type': 'application/json' },
         });
       
