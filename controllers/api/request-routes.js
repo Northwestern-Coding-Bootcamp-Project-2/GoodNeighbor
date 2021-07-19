@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
       title: req.body.title,
       text: req.body.text,
       image_link: req.body.image_link,
-      poster_id: req.session.user_id,
+      poster_id: 4,
       location_id: req.body.location_id
     });
       res.status(200).json(requestData);
