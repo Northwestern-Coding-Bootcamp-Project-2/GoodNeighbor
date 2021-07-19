@@ -12,8 +12,9 @@ router.post('/', async (req, res) => {
       title: req.body.title,
       text: req.body.text,
       image_link: req.body.image_link,
-      poster_id: req.body.poster_id,
-      location_id: req.body.location_id});
+      poster_id: req.session.user_id,
+      location_id: req.body.location_id
+    });
       res.status(200).json(requestData);
   } catch (err) {
     res.status(400).json(err);
