@@ -39,8 +39,8 @@ router.get('/:id', withAuth, async (req, res) => {
 
         res.render('messages', {
             ...message,
-            logged_in: true
-        });
+            logged_in: req.session.logged_in        
+          });
     } catch (err) {
         res.status(500).json(err);
     }
@@ -49,8 +49,10 @@ router.get('/:id', withAuth, async (req, res) => {
 router.put('/:id', withAuth, async (req, res) => {
     try {
         const newMessage = await Message.update({
-          read: true
-
+          read: true,
+          where: {
+            id:  req.params.id
+          },
         });
     
         res.status(200).json(newMessage);

@@ -42,7 +42,9 @@ router.put('/:id', withAuth, async (req, res) => {
     try {
       const newRequest = await Request.update({
         ...req.body,
-        request_id: req.params.id
+        where: {
+          id:  req.params.id,
+        }
       });
   
       res.status(200).json(newRequest);

@@ -1,23 +1,23 @@
 const newMessageHandler = async (event) => {
     event.preventDefault();
   
-    const name = document.querySelector('#project-name').value.trim();
-    const needed_funding = document.querySelector('#project-funding').value.trim();
-    const description = document.querySelector('#project-desc').value.trim();
+    const text = document.querySelector('#text').value.trim();
+    const image_link = document.querySelector('#image-link').value.trim();
+    const description = document.querySelector('#desc').value.trim();
   
-    if (name && needed_funding && description) {
+    if (text && image_link && description) {
       const response = await fetch(`/api/message`, {
         method: 'POST',
-        body: JSON.stringify({ name, needed_funding, description }),
+        body: JSON.stringify({ text, image_link, description }),
         headers: {
           'Content-Type': 'application/json',
         },
       });
   
       if (response.ok) {
-        document.location.replace('/profile');
+        document.location.replace('/message');
       } else {
-        alert('Failed to create project');
+        alert('Failed to send message');
       }
     }
 };
