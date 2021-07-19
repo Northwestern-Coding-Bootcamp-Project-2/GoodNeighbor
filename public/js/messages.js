@@ -1,20 +1,4 @@
-const delButtonHandler = async (event) => {
-    if (event.target.hasAttribute('data-id')) {
-      const id = event.target.getAttribute('data-id');
-  
-      const response = await fetch(`/api/message/${id}`, {
-        method: 'DELETE',
-      });
-  
-      if (response.ok) {
-        document.location.replace('/profile');
-      } else {
-        alert('Failed to delete project');
-      }
-    }
-};
-
-const newFormHandler = async (event) => {
+const newMessageHandler = async (event) => {
     event.preventDefault();
   
     const name = document.querySelector('#project-name').value.trim();
@@ -40,8 +24,4 @@ const newFormHandler = async (event) => {
 
 document
   .querySelector('#send-msg-btn')
-  .addEventListener('submit', newFormHandler);
-
-document
-  .querySelector('#delete-msg-btn')
-  .addEventListener('click', delButtonHandler);
+  .addEventListener('submit', newMessageHandler);

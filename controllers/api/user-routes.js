@@ -20,7 +20,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
         res.render('dashboard', {
             ...user,
-            logged_in: true
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
@@ -37,7 +37,7 @@ router.get('/profile', withAuth, async (req, res) => {
 
         res.render('user', {
             ...user,
-            logged_in: true
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
@@ -54,7 +54,7 @@ router.get('/profile/:id', withAuth, async (req, res) => {
 
         res.render('user', {
             ...user,
-            logged_in: true
+            logged_in: req.session.logged_in
         });
     } catch (err) {
         res.status(500).json(err);
@@ -65,7 +65,9 @@ router.put('/profile', withAuth, async (req, res) => {
     try {
       const newUser = await User.update({
         ...req.body,
-        user_id: req.session.user_id,
+        where: {
+          id:  req.session.user_id,
+        },
       });
   
       res.status(200).json(newUser);
