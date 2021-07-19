@@ -10,7 +10,7 @@ router.get('/:id', withAuth, async (req, res) =>{
     try {
       const locationData = await Request.findAll({
           where: {
-            location_id = req.params.id
+            location_id: req.params.id
           },
           include: [{ model: User }, {model: Location}]
         });
