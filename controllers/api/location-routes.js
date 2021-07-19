@@ -9,8 +9,10 @@ const { Request } = require('../../models');
 router.get('/', withAuth, async (req, res) =>{
     try {
       const locationData = await Request.findAll({
-
-            include: [{ model: User }, {model: Location}]
+          where: {
+            location_id = req.params
+          },
+          include: [{ model: User }, {model: Location}]
         });
   
 

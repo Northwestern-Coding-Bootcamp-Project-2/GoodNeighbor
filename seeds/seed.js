@@ -1,10 +1,9 @@
 const sequelize = require('../config/connection');
-const { User, Location, Message,  Request, StarredRequest } = require('../models');
+const { User, Location, Message,  Request } = require('../models');
 
 const userData = require('./userData.json');
 const messageData = require('./messageData.json');
 const requestData = require('./requestData.json');
-const starredRequestData = require('./starredRequestData.json');
 const locationData = require('./locationData.json');
 
 const seedDatabase = async () => {
