@@ -44,6 +44,7 @@ const searchFormHandler = async (event) => {
 }
 const makeFormHandler = async (event) => {
     event.preventDefault();
+    const poster_id = 4;
     const title = document.querySelector('#title').value.trim();    
     const text = document.querySelector('#text').value.trim();
     const image_link = document.querySelector('#image-link').value.trim();
@@ -52,7 +53,7 @@ const makeFormHandler = async (event) => {
     if (title && text && image_link) {
         const response = await fetch('/api/request', {
           method: 'POST',
-          body: JSON.stringify({ title, text, image_link, location_id}),
+          body: JSON.stringify({ poster_id, title, text, image_link, location_id}),
           headers: { 'Content-Type': 'application/json' },
         });
       
