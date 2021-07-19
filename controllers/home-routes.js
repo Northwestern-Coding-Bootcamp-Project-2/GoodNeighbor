@@ -2,7 +2,7 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth');
 
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
     try{
         res.render('homepage-details', {
             logged_in: req.session.logged_in
@@ -13,7 +13,7 @@ router.get('/', withAuth, async (req, res) => {
     }
 });
 
-router.get('/login', withAuth, async (req, res) => {
+router.get('/login', async (req, res) => {
     try{
         res.render('login', {
             logged_in: req.session.logged_in
@@ -23,7 +23,7 @@ router.get('/login', withAuth, async (req, res) => {
     }
 });
 
-router.get('/signup', withAuth, async (req, res) => {
+router.get('/signup', async (req, res) => {
     try{
         res.render('signup', {
             logged_in: req.session.logged_in
