@@ -6,11 +6,11 @@ const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 const { Request } = require('../../models');
 
-router.get('/', withAuth, async (req, res) =>{
+router.get('/:id', withAuth, async (req, res) =>{
     try {
       const locationData = await Request.findAll({
           where: {
-            location_id = req.params
+            location_id = req.params.id
           },
           include: [{ model: User }, {model: Location}]
         });
