@@ -31,6 +31,17 @@ const starRequestHandler = async (event) => {
     }
 };
 
+
+const goBackHandler = async (event) => {
+    event.preventDefault();
+    let location_id = event.target.getAttribute('data-id');
+    document.location.replace(`/api/location/${location_id}`);
+}
+
+// document
+//     .querySelector('#star-req-btn')
+//     .addEventListener('click', starRequestHandler);
+
 document
-    .querySelector('#star-req-btn')
-    .addEventListener('click', starRequestHandler);
+    .querySelector('.go-back-btn')
+    .addEventListener('click', goBackHandler);

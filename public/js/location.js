@@ -7,8 +7,7 @@ const viewRequestHandler = async (event) => {
     document.location.replace(`/api/request/${request_id}`);
 };
 
-const theButtons = document.querySelector('.view-req-btn')
-for (i = 0; i < theButtons.length; i++) {
-    theButtons[i].addEventListener('click', viewRequestHandler);
-}
+document
+    .querySelector('.request-search-container')
+    .addEventListener('click', viewRequestHandler);
     

@@ -28,10 +28,10 @@ const viewMessageHandler = async (event) => {
   document.location.replace(`/api/message/${message_id}`);
 };
 
-const theButtons = document.querySelector('.view-msg-btn')
-for (i = 0; i < theButtons.length; i++) {
-  theButtons[i].addEventListener('click', viewMessageHandler);
-}
+document
+  .querySelector('.msg-container')
+  .addEventListener('click', viewMessageHandler);
+
 
 document
   .querySelector('#send-msg-btn')
