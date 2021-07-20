@@ -5,7 +5,7 @@ const newMessageHandler = async (event) => {
     const image_link = document.querySelector('#image-link').value.trim();
     const description = document.querySelector('#desc').value.trim();
   
-    if (text && image_link && description) {
+    if (text && description) {
       const response = await fetch(`/api/message`, {
         method: 'POST',
         body: JSON.stringify({ text, image_link, description }),

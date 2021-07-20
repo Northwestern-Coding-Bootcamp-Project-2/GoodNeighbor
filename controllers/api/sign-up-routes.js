@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
     }
   });
 
-  router.get('/', async (req, res) => {
+router.get('/', async (req, res) => {
     try{
       const locationData = await Location.findAll({
         attributes: ['id','city', 'state'] 
@@ -26,6 +26,6 @@ router.post('/', async (req, res) => {
     } catch (err) {
       res.status(400).json
     }
-  });
+});
 
   module.exports = router;
