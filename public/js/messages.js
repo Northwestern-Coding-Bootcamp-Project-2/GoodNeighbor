@@ -22,6 +22,17 @@ const newMessageHandler = async (event) => {
     }
 };
 
+const viewMessageHandler = async (event) => {
+  event.preventDefault();
+  let message_id = event.target.getAttribute('data-id');
+  document.location.replace(`/api/message/${message_id}`);
+};
+
+const theButtons = document.querySelector('.view-msg-btn')
+for (i = 0; i < theButtons.length; i++) {
+  theButtons[i].addEventListener('click', viewMessageHandler);
+}
+
 document
   .querySelector('#send-msg-btn')
   .addEventListener('submit', newMessageHandler);
