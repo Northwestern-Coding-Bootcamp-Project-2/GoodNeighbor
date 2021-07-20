@@ -1,12 +1,15 @@
 <div class="container-fluid dashboard-container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-            <div class="single-request-container">
-                {{#each location as |locations|}}
-                <h4>{{locations.title}}</h4>
-                <p>{{locations.text}}</p>
+            <div class="request-search-container">
+                {{#each location as |request|}}
+                <h4>{{request.title}}</h4>
+                <p>{{request.text}}</p>
+                <button class="view-req-btn" data-id= {{request.id}}>View Request</button>
                 {{/each}}
             </div>
     </div>
   </div>
 </div>
+
+<script src="/js/location.js"></script>

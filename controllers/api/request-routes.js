@@ -38,6 +38,23 @@ try {
 }
 });
 
+router.get('/', withAuth, async (req, res) => {
+try {
+  const requestData = await Request.findAll({
+      //include: [{ model: User }]
+  });
+
+  const request = requestData.get({ plain: true });
+
+  res.render('request', {
+      request,
+      logged_in: req.session.logged_in
+  });
+} catch (err) {
+  res.status(500).json(err);
+}
+});
+
 router.put('/:id', withAuth, async (req, res) => {
     try {
       const newRequest = await Request.update({

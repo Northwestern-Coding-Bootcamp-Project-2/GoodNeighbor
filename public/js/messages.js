@@ -5,7 +5,7 @@ const newMessageHandler = async (event) => {
     const image_link = document.querySelector('#image-link').value.trim();
     const description = document.querySelector('#desc').value.trim();
   
-    if (text && image_link && description) {
+    if (text && description) {
       const response = await fetch(`/api/message`, {
         method: 'POST',
         body: JSON.stringify({ text, image_link, description }),
@@ -21,6 +21,17 @@ const newMessageHandler = async (event) => {
       }
     }
 };
+
+const viewMessageHandler = async (event) => {
+  event.preventDefault();
+  let message_id = event.target.getAttribute('data-id');
+  document.location.replace(`/api/message/${message_id}`);
+};
+
+document
+  .querySelector('.msg-container')
+  .addEventListener('click', viewMessageHandler);
+
 
 document
   .querySelector('#send-msg-btn')

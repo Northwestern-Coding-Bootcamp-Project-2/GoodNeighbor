@@ -9,7 +9,7 @@ const delButtonHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/message');
       } else {
-        alert('Failed to delete project');
+        alert('Failed to delete message');
       }
     }
 };
