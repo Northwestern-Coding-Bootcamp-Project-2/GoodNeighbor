@@ -22,21 +22,20 @@ router.post('/', async (req, res) => {
 });
 
 router.get('/:id', withAuth, async (req, res) => {
-    try {
-        const requestData = await Request.findByPk(req.params.id, {
-            
-            include: [{ model: User }]
-        });
+try {
+  const requestData = await Request.findByPk(req.params.id, {
+      //include: [{ model: User }]
+  });
 
-        const request = requestData.get({ plain: true });
+  const request = requestData.get({ plain: true });
 
-        res.render('request', {
-            ...request,
-            logged_in: true
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
+  res.render('request', {
+      request,
+      logged_in: req.session.logged_in
+  });
+} catch (err) {
+  res.status(500).json(err);
+}
 });
 
 router.put('/:id', withAuth, async (req, res) => {

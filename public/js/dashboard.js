@@ -29,14 +29,15 @@ async function locations() {
 
 const searchFormHandler = async (event) => {
     event.preventDefault();
-    const location_id = dropDown.options[dropDown.selectedIndex].getAttribute('data-id');
+    const location_id = dropDownTwo.options[dropDownTwo.selectedIndex].getAttribute('data-id');
+    console.log('LOCATION:',location_id);
     if (location_id) {
         const response = await fetch(`/api/location/${location_id}`, {
           method: 'GET'
         });
       
         if (response.ok) {
-          document.location.replace(`/api/location/:${location_id}`);
+          document.location.replace(`/api/location/${location_id}`);
         } else {
           alert(response.statusText);
         }
