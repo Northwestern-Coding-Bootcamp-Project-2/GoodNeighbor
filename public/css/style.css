@@ -238,12 +238,31 @@ p {
     margin: 2rem 4rem;
     height: 30vh;
 }
-.request-container h3{
+.your-requests{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0rem;
+    border-bottom: 0.1rem solid #000;
+}
+.your-requests h4{
+    font-size: 2rem;
+}
+.your-requests a{
+    padding: 0.7rem 4rem;
+    background: var(--green);
+    color: var(--white);
+}
+.your-requests a:hover{
+    text-decoration: none;
+    background: var(--red);
+}
+#your-request-header{
     text-transform: uppercase;
     font-weight: 600;
     text-decoration: underline;
-    color: var(--white);
-}
+    color: var(--dark-green);
+    padding: 0rem 4rem;
+} 
 .starred-container{
     background: var(--green);
     padding: 4rem;

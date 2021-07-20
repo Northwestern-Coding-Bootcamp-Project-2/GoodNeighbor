@@ -6,6 +6,7 @@ const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 const { Request } = require('../../models');
 
+/*
 router.get('/:id', withAuth, async (req, res) =>{
     try {
       const locationData = await Request.findAll({
@@ -26,6 +27,24 @@ router.get('/:id', withAuth, async (req, res) =>{
       res.status(500).json(err);
     }
   });
+  */
+
+router.get('/:id', withAuth, async (req, res) => {
+  const currId = req.params.id;
+try{
+    const locationData = await Request.findAll({
+      where: {location_id: currId},
+    });
+    const location = locationData.map((location) => location.get ({ plain: true }));
+
+    res.render('location', {
+        location,
+        logged_in: req.session.logged_in
+    })
+} catch (err){
+    res.status(500).json(err);
+}
+});
 
   router.post('/', async (req, res) => {
     try {

@@ -62,8 +62,14 @@
         </div>
         <div class = "row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h3 id="your-request-header">Your Request</h3>
                 <div class="request-container">
-                    <h3>Your Request</h3>
+                    {{#each dashboardRequests as |dashboardRequest|}}
+                        <div class="your-requests">
+                        <h4>{{dashboardRequest.title}}</h4>
+                        <a href="api/request/{{dashboardRequest.id}}">View Request</a>
+                        </div>
+                    {{/each}}
                 </div>
             </div>
         </div>
