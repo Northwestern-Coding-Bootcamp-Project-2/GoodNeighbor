@@ -1,4 +1,22 @@
-<div class="container-fluid hero-container">
+<div class="hero-container">
+    <div class="hero">
+        <img src="../img/pexels-william-fortunato-6140411-new.jpg">
+          <div class="hero-tite-container">
+            <h1 id="headline">GoodNeighbor</h1>
+            <div class="hero-btn-container">
+                {{#if logged_in}}
+                <a id="hero-sign-in-btn" class="hero-btn" href="/dashboard">Dashboard</a>
+                {{else}}
+                <a id="hero-sign-in-btn" class="hero-btn" href="/login">SignIn</a>
+                <a id="hero-sign-up-btn" class="hero-btn" href="/signup">SignUp</a>
+                {{/if}}
+            </div>
+          </div>
+      </div>
+</div>
+<div class="slider"></div>
+
+<!--<div class="container-fluid hero-container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
       <div class="hero-tite-container">
@@ -8,4 +26,4 @@
             <a class="hero-btn" href="/signup">SignUp</a>
           </div>
       </div>
-</div>
+</div>-->
