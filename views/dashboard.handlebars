@@ -75,8 +75,12 @@
         </div>
         <div class = "row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="starred-container">
-                    <h3>Starred Request</h3>
+                <div class="saved-container">
+                    <h3>Saved Requests</h3>
+                    <div class="your-requests">
+                        <h4>{{dashboardRequest.title}}</h4>
+                        <a href="api/request/{{dashboardRequest.id}}">View Request</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -1,5 +1,8 @@
 const router = require('express').Router();
 const { StarredRequest } = require('../../models');
+const { Request } = require('../../models');
+const withAuth = require('../../utils/auth');
+
 
 router.post('/', async (req, res) => {
     try {
@@ -27,5 +30,20 @@ router.get('/', async (req, res) => {
         res.status(400).json
     }
 });
+
+router.put('/:id', withAuth, async (req, res) => {
+    try {
+      const newRequest = await Request.update({
+        ...req.body,
+        where: {
+          id:  req.params.id,
+        }
+      });
+  
+      res.status(200).json(newRequest);
+    } catch (err) {
+      res.status(400).json(err);
+    }
+  });
 
 module.exports = router;

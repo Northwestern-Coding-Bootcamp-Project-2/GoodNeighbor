@@ -41,6 +41,10 @@ Request.init(
             },
 
         },
+        starred: {
+            type: DataTypes.BOOLEAN,
+            allowNull: true,
+        }
     },
         {
         sequelize,

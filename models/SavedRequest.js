@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class StarredRequest extends Model {}
+class SavedRequest extends Model {}
 
-StarredRequest.init(
+SavedRequest.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -34,8 +34,8 @@ StarredRequest.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'starred-request',
+        modelName: 'saved-request',
     }
 );
 
-module.exports = StarredRequest;
+module.exports = SavedRequest;

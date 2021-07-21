@@ -45,6 +45,11 @@ router.get('/dashboard', withAuth, async (req, res) => {
         });
         const dashboardRequests = dashboardRequestData.map((dashboard) => dashboard.get ({ plain: true }));
 
+        const savedDashboardRequestData = await Request.findAll({
+            where: {user_id: currId},
+        });
+        const savedDashboardRequests = savedDashboardRequestData.map((dashboard) => dashboard.get ({ plain: true }));
+
         res.render('dashboard', {
             dashboardRequests,
             logged_in: req.session.logged_in
