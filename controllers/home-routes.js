@@ -2,6 +2,7 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth');
 //New added on the bottom 
 const { Request } = require('../models');
+const { SavedRequest } = require('../models');
 const { User } = require('../models');
 
 
@@ -40,13 +41,32 @@ router.get('/signup', async (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
         const currId = req.session.user_id;
     try{
+
+        const userRequestData = await User.findAll({
+            where: {id:req.session.user_id},
+            include: [Location]
+        })
+
+        const userData = userRequestData.map((dashboard) => dashboard.get ({plain: true }));
+
         const dashboardRequestData = await Request.findAll({
             where: {poster_id: currId},
         });
         const dashboardRequests = dashboardRequestData.map((dashboard) => dashboard.get ({ plain: true }));
+        
+        const savedDashboardRequestData = await SavedRequest.findAll({
+            where: {user_id: currId},
+            include: [Request]
+        });
+        
+        
+        const savedDashboardRequests = savedDashboardRequestData.map((dashboard) => dashboard.get ({ plain: true }));
+
 
         res.render('dashboard', {
             dashboardRequests,
+            savedDashboardRequests,
+            userData,
             logged_in: req.session.logged_in
         })
     } catch (err){

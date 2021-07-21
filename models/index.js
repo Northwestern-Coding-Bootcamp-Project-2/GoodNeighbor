@@ -1,7 +1,7 @@
 const User = require('./User');
 const Request = require('./Request');
 const Message = require('./Message');
-const StarredRequest = require('./StarredRequest');
+const SavedRequest = require('./SavedRequest');
 const Location = require('./Location');
 
 Location.hasMany(User, {
@@ -49,23 +49,23 @@ Message.belongsTo(User, {
   foreignKey: 'recipient_id'
 });
 
-User.hasMany(StarredRequest, {
+User.hasMany(SavedRequest, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
 
-StarredRequest.belongsTo(User, {
+SavedRequest.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Location.hasMany(StarredRequest, {
-    foreignKey: 'location_id',
+Request.hasMany(SavedRequest, {
+    foreignKey: 'request_id',
     onDelete: 'CASCADE'
   });
   
-  StarredRequest.belongsTo(Location, {
-    foreignKey: 'location_id'
+  SavedRequest.belongsTo(Request, {
+    foreignKey: 'request_id'
   });
   
 
-module.exports = { User, Message, Request, StarredRequest, Location };
+module.exports = { User, Message, Request, SavedRequest, Location };

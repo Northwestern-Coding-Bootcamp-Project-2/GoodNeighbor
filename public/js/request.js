@@ -1,33 +1,22 @@
-// Star request button, update button, delete button
+// save request button, update button, delete button
 
-const starRequestHandler = async (event) => {
+const saveRequestHandler = async (event) => {
     event.preventDefault();
 
     // Get the id from the request page somehow thru handlebars maybe and pass it thru the .create
-    const title = document.querySelector('#title').value;
-    const request = await fetch('/api/request', {
-        method: 'GET',
-        where: {
-            title: title
-        }
+    const request_id = event.target.getAttribute('data-id');
+    const response = await fetch(`/api/saved-request`, {
+        method: 'POST',
+        body: JSON.stringify({ request_id }),
+        headers: {
+            'Content-Type': 'application/json',
+        },
     });
 
-
-    if (request) {
-        const request_id = request.id;
-        const response = await fetch(`/api/starred-request`, {
-            method: 'POST',
-            body: JSON.stringify({ request_id }),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (response.ok) {
-            console.log('Request starred')
-        } else {
-            alert('Failed to star request');
-        }
+    if (response.ok) {
+        console.log('Saved!')
+    } else {
+        alert('Failed to save request');
     }
 };
 
@@ -38,9 +27,9 @@ const goBackHandler = async (event) => {
     document.location.replace(`/api/location/${location_id}`);
 }
 
-// document
-//     .querySelector('#star-req-btn')
-//     .addEventListener('click', starRequestHandler);
+document
+    .querySelector('.save-req-btn')
+    .addEventListener('click', saveRequestHandler);
 
 document
     .querySelector('.go-back-btn')
