@@ -43,8 +43,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
     try{
 
         const userRequestData = await User.findAll({
-            where: {id:req.session.user_id},
-            include: [Location]
+            where: {id:req.session.user_id}
         })
 
         const userData = userRequestData.map((dashboard) => dashboard.get ({plain: true }));
