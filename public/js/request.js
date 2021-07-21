@@ -4,35 +4,19 @@ const saveRequestHandler = async (event) => {
     event.preventDefault();
 
     // Get the id from the request page somehow thru handlebars maybe and pass it thru the .create
-    const title = document.querySelector('#title').value;
-    const request = await fetch('/api/request', {
-        method: 'GET',
-        where: {
-            title: title
-        }
+    const request_id = event.target.getAttribute('data-id');
+    const response = await fetch(`/api/saved-request`, {
+        method: 'POST',
+        body: JSON.stringify({ request_id }),
+        headers: {
+            'Content-Type': 'application/json',
+        },
     });
 
-
-    if (request) {
-        const request_id = request.id;
-        const response = await fetch(`/api/saved-request`, {
-            method: 'POST',
-            body: JSON.stringify({ request_id }),
-            headers: {
-                'Content-Type': 'application/json',
-            },
-        });
-
-        if (response.ok) {
-            let request_id = event.target.getAttribute('data-id');
-            let saved = true;
-            const responseTwo = await fetch(`/api/saved-request/${request_id}`, {
-                method: 'PUT',
-                body: JSON.stringify({ saved })
-            })
-        } else {
-            alert('Failed to save request');
-        }
+    if (response.ok) {
+        console.log('Saved!')
+    } else {
+        alert('Failed to save request');
     }
 };
 

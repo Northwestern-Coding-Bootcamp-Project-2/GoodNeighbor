@@ -2,6 +2,7 @@ const router = require('express').Router();
 const withAuth = require('../utils/auth');
 //New added on the bottom 
 const { Request } = require('../models');
+const { SavedRequest } = require('../models');
 const { User } = require('../models');
 
 
@@ -44,14 +45,18 @@ router.get('/dashboard', withAuth, async (req, res) => {
             where: {poster_id: currId},
         });
         const dashboardRequests = dashboardRequestData.map((dashboard) => dashboard.get ({ plain: true }));
-
-        const savedDashboardRequestData = await Request.findAll({
+        
+        const savedDashboardRequestData = await SavedRequest.findAll({
             where: {user_id: currId},
         });
+        
+        
         const savedDashboardRequests = savedDashboardRequestData.map((dashboard) => dashboard.get ({ plain: true }));
-
+        
+        console.log("Dashboard Request Data: ", dashboardRequestData);
         res.render('dashboard', {
             dashboardRequests,
+            savedDashboardRequests,
             logged_in: req.session.logged_in
         })
     } catch (err){

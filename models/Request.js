@@ -41,7 +41,7 @@ Request.init(
             },
 
         },
-        starred: {
+        saved: {
             type: DataTypes.BOOLEAN,
             allowNull: true,
         }

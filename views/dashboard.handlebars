@@ -76,11 +76,16 @@
         <div class = "row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <div class="saved-container">
-                    <h3>Saved Requests</h3>
-                    <div class="your-requests">
-                        <h4>{{dashboardRequest.title}}</h4>
-                        <a href="api/request/{{dashboardRequest.id}}">View Request</a>
-                    </div>
+                    {{#if savedDashboardRequests}}
+                        {{#each savedDashboardRequests as |savedDashboardRequest|}}
+                            <h3>Saved Requests</h3>
+                            <div class="your-requests">
+                                <h4>{{savedDashboardRequest.request.title}}</h4>
+                                <a href="api/request/{{savedDashboardRequest.request.id}}">View Request</a>
+                                <button data-id="{{savedDashboardRequest.request.id}}" class="unsave-req-btn">Unsave Request</button>
+                            </div>
+                        {{/each}}
+                    {{/if}}
                 </div>
             </div>
         </div>

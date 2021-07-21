@@ -1,17 +1,17 @@
 const router = require('express').Router();
-const { StarredRequest } = require('../../models');
+const { SavedRequest } = require('../../models');
 const { Request } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
 router.post('/', async (req, res) => {
     try {
-        const starredReqData = await StarredRequest.create({
+        const savedReqData = await SavedRequest.create({
             user_id: req.session.user_id,
             request_id: req.body.request_id
         });
 
-        res.status(200).json(starredReqData);
+        res.status(200).json(savedReqData);
     } catch (err) {
         res.status(400).json(err);
     }
@@ -19,13 +19,14 @@ router.post('/', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
-        const starredRequestData = await StarredRequest.findAll({
+        const savedRequestData = await SavedRequest.findAll({
             where: {
                 user_id: req.session.user_id
-            }
+            },
+            include: [{model: Request}]
         });
-        res.status(200).json(starredRequestData);
-        console.log('Starred Requests: ', starredRequestData);
+        res.status(200).json(savedRequestData);
+        console.log('Saved Requests: ', savedRequestData);
     } catch (err) {
         res.status(400).json
     }
@@ -45,5 +46,24 @@ router.put('/:id', withAuth, async (req, res) => {
       res.status(400).json(err);
     }
   });
+
+router.delete('/:id', withAuth, async (req, res) => {
+    try {
+        const savedReqData = await SavedRequest.destroy({
+            where: {
+              id:  req.params.id
+            },
+          });
+      
+          if (!savedReqData) {
+            res.status(404).json({request: 'Failure'});
+            return;
+          }
+      
+          res.status(200).json(savedReqData);
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
 
 module.exports = router;

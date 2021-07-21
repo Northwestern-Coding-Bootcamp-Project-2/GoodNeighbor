@@ -66,6 +66,45 @@ const makeFormHandler = async (event) => {
     }
 }
 
+const unsaveRequestHandler = async (event) => {
+  event.preventDefault();
+
+  // Get the id from the request page somehow thru handlebars maybe and pass it thru the .create
+  const request_id = event.target.getAttribute('data-id');
+  const request = await fetch(`/api/request/`, {
+      method: 'GET',
+      where: {
+          id: request_id
+      }
+  });
+
+
+  if (request) {
+      const request_id = request.id;
+      const response = await fetch(`/api/saved-request`, {
+          method: 'DELETE',
+          body: JSON.stringify({ request_id }),
+          headers: {
+              'Content-Type': 'application/json',
+          },
+      });
+
+      if (response.ok) {
+          let request_id = event.target.getAttribute('data-id');
+          let saved = false;
+          const responseTwo = await fetch(`/api/saved-request/${request_id}`, {
+              method: 'PUT',
+              body: JSON.stringify({ saved })
+          })
+          if (!responseTwo.ok) {
+            alert('Failed to save request')
+          }
+      } else {
+          alert('Failed to save request');
+      }
+  }
+};
+
 document
   .querySelector('#submit-request-btn')
   .addEventListener('click', makeFormHandler);
@@ -73,3 +112,7 @@ document
 document
   .querySelector('#submit-search-btn')
   .addEventListener('click', searchFormHandler);
+
+document
+    .querySelector('.unsave-req-btn')
+    .addEventListener('click', unsaveRequestHandler);
