@@ -4,13 +4,12 @@
         COLORS
 ======================*/
 :root{
-    --dark-green: #264653;
-    --green: #2A9D8F;
+    --dark-green: #5F6C5A;
     --yellow: #E9C46A;
-    --orange: #F4A261;
-    --red: #E76F51;
-    --white: #fff;
-    --black: #000;
+    --orange: #F78E69;
+    --red: #D16666;
+    --white: #FCFCFC;
+    --black: #02111B;
 }
 
 /*=====================
@@ -24,32 +23,32 @@ html{
 /*Setting up the h1 - h6 tags with the font-sizes*/
 h1 {
     font-size: 4rem;
-    font-family: 'Open Sans';
+    font-family: 'Roboto', sans-serif;
 }
 h2 {
     font-size: 3.5rem;
-    font-family: 'Open Sans';
+    font-family: 'Roboto', sans-serif;
 }
 h3 {
     font-size: 3rem;
-    font-family: 'Open Sans';
+    font-family: 'Roboto', sans-serif;
 }
 h4 {
     font-size: 2.5rem;
-    font-family: 'Open Sans';
+    font-family: 'Roboto', sans-serif;
 }
 h5 {
     font-size: 2rem;
-    font-family: 'Open Sans';
+    font-family: 'Roboto', sans-serif;
 }
 h6 {
     font-size: 1.5rem;
-    font-family: 'Open Sans';
+    font-family: 'Roboto', sans-serif;
 } 
 p {
     font-size: 1.6rem;
     margin-bottom: 1rem;
-    font-family: 'Open Sans';
+    font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
 
@@ -57,14 +56,15 @@ p {
       NAVIGATION
 ====================*/
 
-.navbar{
-    background: linear-gradient(to left, #626A5F, #71786f);
-}
 .navbar-items{
-    padding: 0rem 4rem;
+    padding: 2rem 4rem 0rem 4rem;
+    width: 85%;
 }
 .navbar-brand{
     color: var(--white);
+    font-size: 2.5rem;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 0.1rem;
 }
 .navbar-brand:hover{
     color: var(--orange);
@@ -76,6 +76,9 @@ p {
 .navbar-nav li a{
     color: var(--white);
     text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.8rem;
 }
 .navbar-nav li a:hover{
     color: var(--orange);
@@ -90,11 +93,25 @@ p {
     height: 80vh;
     justify-content: center;
     align-items: center;
+    margin-top: 0rem;
+}
+.hero-row{
+    height: 100vh !important;
 }
 .hero{
     height: 60%;
     width: 100%;
     position: relative;
+}
+.hero::after{
+    content: "";
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
 }
 .hero img{
     width: 100%;
@@ -103,6 +120,7 @@ p {
 }
 #headline{
     color: #fefefe;
+    z-index: 3;
 }
 .hero-tite-container{
     width: 100%;
@@ -117,12 +135,16 @@ p {
     position: absolute;
 }
 .hero-tite-container h1{
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: 2px;
     font-size: 6rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    padding: 0rem;
 }
 .hero-btn-container{
-    padding: 2rem 0rem;
+    padding: 1.5rem 0rem;
+    z-index: 3;
 }
 .hero-btn-container a{
     padding: 1rem 5rem;
@@ -135,16 +157,158 @@ p {
     text-decoration: none;
     background-color: var(--orange);
 }
+.hero-btn{
+    border-radius: 4px;
+    font-weight: 500;
+}
 .slider{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to left, #626A5F, #71786f);
+    background: linear-gradient(to bottom, var(--dark-green), #7e897a);
     z-index: -1 !important;
 }
 
+/*======================
+    ABOUT CONTAINER
+======================*/
+.about-container{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.about-image-container{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.about-image-container::after{
+    content: "";
+    background: var(--red);
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    z-index: -3;
+    border-radius: 0.5rem;
+}
+.about-image-container img{
+    width: 80%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+.about-text-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 7rem;
+    margin-top: 5rem;
+}
+#about-heading{
+    display: flex;
+}
+hr{
+    width: 50%;
+    align-self: center;
+    margin-left: 1.7rem;
+    padding: 0.01rem 0rem;
+    margin-top: 2rem;
+    border-color: #000;
+    opacity: 1;
+}
+hr:not([size]){
+    height: 0px;
+}
+#about-heading h2{
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+.about-text-container p{
+    text-align: left;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right:auto;
+}
+.about-text-container a{
+    padding: 1.2rem 5rem;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1.8rem;
+    border-radius: 5px;
+    align-self: flex-start;
+    margin-top: 1.5rem;
+}
+.about-text-container a:hover{
+    text-decoration: none;
+    background-color: var(--red);
+}
+.offer-container{
+    margin-top: 15rem;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.offer-image-container{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: relative;
+}
+.offer-image-container::after{
+    content: "";
+    background: var(--orange);
+    width: 80%;
+    height: 100%;
+    position: absolute;
+    left: 5%;
+    top: 10%;
+    z-index: -3;
+    border-radius: 0.5rem;
+}
+.offer-image-container img{
+    width: 80%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+.offer-text-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 7rem;
+    margin-top: 5rem;
+}
+#offer-heading{
+    display: flex;
+}
+#offer-heading h2{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 2rem;
+}
+.offer-text-container p{
+    text-align: left;
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right:auto;
+}
+.offer-text-container a{
+    padding: 1.2rem 5rem;
+    background: var(--dark-green);
+    color: var(--white);
+    font-size: 1.8rem;
+    border-radius: 5px;
+    align-self: flex-start;
+    margin-top: 1.5rem;
+}
+.offer-text-container a:hover{
+    text-decoration: none;
+    background-color: var(--red);
+}
 /*======================
       LOGIN FORM 
 ======================*/
