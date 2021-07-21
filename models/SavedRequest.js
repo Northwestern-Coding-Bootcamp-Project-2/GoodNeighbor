@@ -34,7 +34,7 @@ SavedRequest.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'saved-request',
+        modelName: 'saved_request',
     }
 );
 

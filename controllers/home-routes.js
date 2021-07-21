@@ -41,6 +41,14 @@ router.get('/signup', async (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
         const currId = req.session.user_id;
     try{
+
+        const userRequestData = await User.findAll({
+            where: {id:req.session.user_id},
+            include: [Location]
+        })
+
+        const userData = userRequestData.map((dashboard) => dashboard.get ({plain: true }));
+
         const dashboardRequestData = await Request.findAll({
             where: {poster_id: currId},
         });
@@ -48,15 +56,17 @@ router.get('/dashboard', withAuth, async (req, res) => {
         
         const savedDashboardRequestData = await SavedRequest.findAll({
             where: {user_id: currId},
+            include: [Request]
         });
         
         
         const savedDashboardRequests = savedDashboardRequestData.map((dashboard) => dashboard.get ({ plain: true }));
-        
-        console.log("Dashboard Request Data: ", dashboardRequestData);
+
+
         res.render('dashboard', {
             dashboardRequests,
             savedDashboardRequests,
+            userData,
             logged_in: req.session.logged_in
         })
     } catch (err){

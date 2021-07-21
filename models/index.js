@@ -58,13 +58,13 @@ SavedRequest.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Location.hasMany(SavedRequest, {
-    foreignKey: 'location_id',
+Request.hasMany(SavedRequest, {
+    foreignKey: 'request_id',
     onDelete: 'CASCADE'
   });
   
-  SavedRequest.belongsTo(Location, {
-    foreignKey: 'location_id'
+  SavedRequest.belongsTo(Request, {
+    foreignKey: 'request_id'
   });
   
 
