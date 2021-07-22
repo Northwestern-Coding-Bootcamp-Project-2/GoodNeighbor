@@ -30,8 +30,20 @@ Kenny Cheng, Kyaah Ellis, Rudie G (Rauol Moore), and Ryan Hillier 📜
   
 ## Screenshot 📸 
 ---
-undefined
-<img alt="" src="" width="150" height="150"> |
+Dashboard
+<img alt="dashboard-screenshot" src="./public/img/dashboard-GN.png"> |
+<br />
+<br />
+Homepage
+<img alt="homepage-screenshot" src="./public/img/homepage-GN.jpg"> |
+<br />
+<br />
+View Request
+<img alt="viewrequest-screenshot" src="./public/img/viewrequest-GN.png"> |
+<br />
+<br />
+Search Request
+<img alt="searchrequest-screenshot" src="./public/img/saerchrequest-GN.png"> |
 <br />
 <br />
 
