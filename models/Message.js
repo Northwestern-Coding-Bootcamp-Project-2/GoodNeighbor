@@ -27,6 +27,10 @@ Message.init(
         key: 'id',
       },
     },
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     text: {
       type: DataTypes.STRING,
       allowNull: false,

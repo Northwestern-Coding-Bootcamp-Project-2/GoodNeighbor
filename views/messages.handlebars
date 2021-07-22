@@ -2,16 +2,21 @@
 <div class="container-fluid message-container">
     <div class="row">
     <form id= "messages-table"></form>
-   <div class="message-box1">100% wide until large breakpoint</div>
-   <div class="message-box2">100% wide until large breakpoint</div>
-   <div class="message-box3">100% wide until large breakpoint</div>
-   <div class="message-box4">100% wide until large breakpoint</div>
-   <div class="message-box5">100% wide until large breakpoint</div>
-   <div class="message-box6">100% wide until large breakpoint</div>
-   <div class="message-box7">100% wide until large breakpoint</div>
+    {{#each recMsgData as |message|}}
+   <div class="message-box">
+       <h3>{{title}}</h3>
+       <p>{{user.username}}</p>
+   </div>
+    {{/each}}
+    {{#each sentMsgData as |message|}}
+   <div class="message-box">
+       <h3>{{title}}</h3>
+       <p>{{user.username}}</p>
+   </div>
+    {{/each}}
 </div>
 
-<div class="container-lg">100% wide until large breakpoint
+<div class="container-lg">
  <button id="send-message-btn" type="submit">Send message</button>
 </div>
 

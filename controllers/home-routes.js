@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const withAuth = require('../utils/auth');
 //New added on the bottom 
-const { Request } = require('../models');
+const { Request, Message } = require('../models');
 const { SavedRequest } = require('../models');
 const { User } = require('../models');
 
@@ -20,6 +20,28 @@ router.get('/', async (req, res) => {
 router.get('/login', async (req, res) => {
     try{
         res.render('login', {
+            logged_in: req.session.logged_in
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/message', async (req, res) => {
+    try{
+        const receivedMsgRequestData = await Message.findAll({
+            where: {recipient_id: req.session.user_id},
+            include: [User]
+        })
+        const sentMsgRequestData = await Message.findAll({
+            where: {sender_id: req.session.user_id},
+            include: [User]
+        })
+        const recMsgData = receivedMsgRequestData.map((dashboard) => dashboard.get ({plain: true }));
+        const sentMsgData = sentMsgRequestData.map((dashboard) => dashboard.get ({plain: true }));
+        res.render('messages', {
+            recMsgData,
+            sentMsgData,
             logged_in: req.session.logged_in
         });
     } catch (err) {

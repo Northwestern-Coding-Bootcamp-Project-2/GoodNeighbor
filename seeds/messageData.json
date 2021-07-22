@@ -1,23 +1,27 @@
 [
     {
+        "title": "I am a title",
         "text": "I am a message",
         "sender_id": "1",
         "recipient_id": "2",
         "image_link": ""
     },
     {
+        "title": "I am a title",
         "text": "I am a message",
         "sender_id": "2",
         "recipient_id": "3",
         "image_link": ""
     },
     {
+        "title": "I am a title",
         "text": "I am a message",
         "sender_id": "3",
         "recipient_id": "4",
         "image_link": ""
     },
     {
+        "title": "I am a title",
         "text": "I am a message",
         "sender_id": "4",
         "recipient_id": "5",
