@@ -8,6 +8,6 @@ const viewRequestHandler = async (event) => {
 };
 
 document
-    .querySelector('.request-search-container')
-    .addEventListener('click', viewRequestHandler);
-    
+  .querySelectorAll('.view-req-btn').forEach((element) => {
+    element.addEventListener('click', viewRequestHandler)
+  });
