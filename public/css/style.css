@@ -140,9 +140,9 @@ nav{
     font-weight: 500;
     letter-spacing: 2px;
     font-size: 6rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Pacifico', cursive;
     letter-spacing: 2px;
-    padding: 0rem;
+    padding: 0rem 0rem 2rem 0rem;
 }
 .hero-btn-container{
     padding: 1.5rem 0rem;
@@ -154,6 +154,8 @@ nav{
     background: var(--red);
     color: var(--white);
     text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
 }
 .hero-btn-container a:hover{
     text-decoration: none;
@@ -306,6 +308,7 @@ hr:not([size]){
     border-radius: 5px;
     align-self: flex-start;
     margin-top: 1.5rem;
+    text-transform: uppercase;
 }
 .offer-text-container a:hover{
     text-decoration: none;
@@ -319,7 +322,6 @@ hr:not([size]){
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background: var(--dark-green);
     position: relative;
 }
 .bottom-container::after{
@@ -335,18 +337,20 @@ hr:not([size]){
 .bottom-image-container{
     display: flex;
     height: 60vh;
+    width:100%;
     justify-content: center;
     align-items: center;
     margin-top: 0rem;
 }
 .bottom-image-container img{
-    width: 90%;
+    width: 100%;
+    height: 100%;
 }
 .bottom-title-container{
     width: 100%;
     padding: 0;
     margin: 0;
-    top: 50%;
+    top: 40%;
     display: flex;
     align-items: center;
     align-content: center;
@@ -358,14 +362,14 @@ hr:not([size]){
     font-weight: 500;
     letter-spacing: 2px;
     font-size: 6rem;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Pacifico', cursive;
     letter-spacing: 2px;
-    padding: 0rem;
+    padding: 0rem 0rem 2rem 0rem;
     color: var(--white);
     z-index: 3;
 }
 .bottom-title-container a{
-    padding: 1.2rem 5rem;
+    padding: 1rem 5rem;
     background: var(--orange);
     color: var(--white);
     font-size: 1.8rem;
@@ -374,6 +378,7 @@ hr:not([size]){
     margin-top: 1.5rem;
     z-index: 3;
     opacity:1;
+    text-transform: uppercase;
 }
 .bottom-title-container a:hover{
     text-decoration: none;
@@ -393,11 +398,22 @@ hr:not([size]){
     justify-content: center;
     flex-direction: column;
 }
+#login-header{
+    letter-spacing: 2px;
+    font-size: 4.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+#login-form label{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
 #login-form input{
-    width: 15vw;
+    width: 100%;
     height: auto;
     border: 1px solid var(--black);
     opacity: 0.5;
+    padding: 0.5rem 0rem;
 }
 #login-submit{
     text-transform: uppercase;
@@ -408,10 +424,12 @@ hr:not([size]){
     background-color: var(--orange);
     color: var(--white);
     opacity: 1 !important;
+    margin-top: 2rem;
 }
 #login-submit:hover{
     background: var(--yellow);
 }
+
 
 /*======================
       SIGN UP FORM 
@@ -428,21 +446,41 @@ hr:not([size]){
     justify-content: center;
     flex-direction: column;
 }
+#signup-header{
+    letter-spacing: 2px;
+    font-size: 4.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+#sign-form label{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+}
 #signup-form input{
-    width: 15vw;
+    width: 100%;
     height: auto;
     border: 1px solid var(--black);
     opacity: 0.5;
+    padding: 0.5rem 0rem;
+}
+#signup-form select{
+    width: 100%;
+    padding: 1rem 0rem;
+}
+[class*='col-']{
+    padding-left: 0rem;
+    padding-right: 0rem;
 }
 #signup-submit{
     text-transform: uppercase;
     margin-top: 1rem;
     font-weight: 500;
-    padding: .5rem 5rem;
+    padding: 1rem 5rem !important;
     border: none !important;
     background-color: var(--orange);
     color: var(--white);
     opacity: 1 !important;
+    margin-top: 2rem;
 }
 #signup-submit:hover{
     background: var(--yellow);
@@ -512,6 +550,7 @@ hr:not([size]){
 }
 .your-requests h4{
     font-size: 2rem;
+    font-weight: 400;
 }
 .your-requests a{
     padding: 0.7rem 4rem;
@@ -546,6 +585,8 @@ hr:not([size]){
 }
 #saved-header-4{
     text-align: left !important;
+    font-size: 2rem;
+    font-weight: 400;
 }
 .saved-buttons{
     text-align: right;
@@ -558,6 +599,11 @@ hr:not([size]){
     padding: 0.7rem 4rem;
     margin-right: 2rem;
 }
+.saved-buttons a:hover{
+    background: var(--yellow);
+    text-decoration: none;
+}
+
 #saved-header{
     text-transform: uppercase;
     font-weight: 600;
@@ -576,6 +622,10 @@ hr:not([size]){
     font-size: 1.8rem;
     border: none;
     padding: 0.9rem 4rem;
+}
+.unsave-req-btn:hover{
+    background: var(--yellow);
+    text-decoration: none;
 }
 .starred-container h3{
     text-transform: uppercase;
@@ -670,6 +720,9 @@ hr:not([size]){
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
 }
+.go-back-btn:hover{
+    background: var(--yellow);
+}
 .save-req-btn{
     margin-left: 4rem;
     border: none;
@@ -679,6 +732,64 @@ hr:not([size]){
     padding: 1rem 4rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+}
+.save-req-btn:hover{
+    background: var(--yellow);
+}
+
+/*======================
+     REQUEST PAGE
+======================*/
+
+    .request-search-container{
+        height: 100%;
+        padding-bottom: 5rem;
+    }
+    .request-search-container h4{
+        margin-top: 5rem;
+        font-size: 3rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+    }
+    .request-search-container p{
+        font-size: 1.8rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+    }
+    .view-req-btn{
+    border: none;
+    font-size: 1.8rem;
+    color: var(--white);
+    background: var(--orange);
+    padding: 0.75rem 4rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    }
+    .view-req-btn:hover{
+        background: var(--red);
+    }
+
+/*======================
+  SEND MESSAGE CSS
+======================*/
+#send-msg-btn{
+    border: none;
+    font-size: 1.8rem;
+    color: var(--white);
+    background: var(--yellow);
+    padding: 0.75rem 4rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    border-radius: 0;
+    margin-left: 5rem;
+}
+#send-msg-btn:hover{
+    background: var(--orange);
+    text-decoration: none;
+}
+#send-message-form input{
+    width: 100%;
+    margin-left: 0rem;
 }
 
 /*======================
