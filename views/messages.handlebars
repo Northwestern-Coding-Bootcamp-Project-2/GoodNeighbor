@@ -6,7 +6,7 @@
    <div class="message-box">
        <h3>{{title}}</h3>
        {{!-- <p>{{user.username}}</p> --}}
-       <button class="view-msg-btn">View Message</button>
+       <button class="view-msg-btn" data-id= {{id}}>View Message</button>
    </div>
     {{/each}}
     {{#each sentMsgData as |message|}}
