@@ -80,4 +80,19 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 });
 
+router.post('/', async (req, res) => {
+  try {
+    const messageData = await Message.create({
+      title: req.body.title,
+      text: req.body.text,
+      image_link: req.body.image_link,
+      sender_id: req.session.user_id,
+      recipient_id: req.body.recipient_id
+    });
+      res.status(200).json(messageData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 module.exports = router;
