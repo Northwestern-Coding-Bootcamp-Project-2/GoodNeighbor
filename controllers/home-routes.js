@@ -21,15 +21,9 @@ router.get('/', async (req, res) => {
 
 router.get('/login', async (req, res) => {
     try {
-        if (req.session.logged_in) {
-            req.session.destroy(() => {
-                res.status(204).end();
-            });
-        } else {
             res.render('login', {
                 logged_in: req.session.logged_in
             });
-        }
     } catch (err) {
         res.status(500).json(err);
     }

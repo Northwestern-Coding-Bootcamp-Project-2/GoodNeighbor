@@ -30,14 +30,15 @@ router.get('/', withAuth, async (req, res) => {
 
 router.get('/:id', withAuth, async (req, res) => {
     try {
-        const messageData = await Message.findByPk(req.params.id, {
-            
-            include: [{ model: User }]
-        });
+        const messageData = await Message.findOne({
+          where: {
+            id: req.params.id
+          }
+                });
 
         const message = messageData.get({ plain: true });
 
-        res.render('messages', {
+        res.render('indivMessage', {
             ...message,
             logged_in: req.session.logged_in        
           });
