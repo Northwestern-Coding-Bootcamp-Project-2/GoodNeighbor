@@ -22,6 +22,7 @@ const saveRequestHandler = async (event) => {
 };
 
 
+
 const goBackHandler = async (event) => {
     event.preventDefault();
     let location_id = event.target.getAttribute('data-id');
@@ -58,6 +59,25 @@ const newMessageHandler = async (event) => {
       }
     }
 };
+
+const delButtonHandler = async (event) => {
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+
+    const response = await fetch(`/api/request/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert('Failed to delete request');
+    }
+  }
+};
+
+document
+  .querySelector('#del-req-btn').addEventListener('click', delButtonHandler);
 
   document
   .querySelector('#send-msg-btn').addEventListener('click', newMessageHandler);

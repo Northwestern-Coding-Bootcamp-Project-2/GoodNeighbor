@@ -29,8 +29,11 @@ try {
 
   const request = requestData.get({ plain: true });
 
+  const currId = req.session.user_id;
+
   res.render('request', {
       request,
+      currId,
       logged_in: req.session.logged_in
   });
 } catch (err) {
