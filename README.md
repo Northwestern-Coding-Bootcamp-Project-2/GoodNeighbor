@@ -52,8 +52,19 @@ Search Request
 <br />
 GitHub: https://github.com/rudie-g
 <br />
-<br />
 Email: rauoldm@gmail.com
+<br />
+GitHub: https://github.com/itskchengs
+<br />
+Email: itskcheng@gmail.com
+<br />
+GitHub: https://github.com/KyaahB
+<br />
+Email: kyaahellis2021@u.northwestern.edu
+<br />
+GitHub: https://github.com/Ryan1992186
+<br />
+Email: 
 <br />
 <br />
 
