@@ -19,6 +19,8 @@ Good Neighbor is a community-driven service exchange app built with express, seq
 ## Installation ⌨️ 
 ---
 To use the app on your local machine with dummy data, clone the repository and run npm i-y and make a .env file with the relevant values so the app can communicate with your MySQL database (goodneighbor_db). Run npm run seed to seed the database with the dummy data, then npm start to start the app. ⌨️
+
+(or go to Heroku! https://thegoodneighbor.herokuapp.com/)
   
 ## Usage 🖥️ 
 ---
@@ -64,7 +66,7 @@ Email: kyaahellis2021@u.northwestern.edu
 <br />
 GitHub: https://github.com/Ryan1992186
 <br />
-Email: 
+Email: ryan1992186@gmail.com
 <br />
 <br />
 
