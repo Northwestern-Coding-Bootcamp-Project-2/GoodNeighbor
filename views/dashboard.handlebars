@@ -1,12 +1,12 @@
 <div class="container-fluid dashboard-container">
   <div class="row">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 account-full-container">
       <div class="account-container">
-        <img src="https://via.placeholder.com/300/09f/fff.png%20C/O%20https://placeholder.com/">
+        <img src="../img/person.jpg">
         <div class="account-information">
             {{#each userData as |userData|}}
-                <p>{{username}}</p>
-                <p>{{email}}</p>
+                <p>Username: {{username}}</p>
+                <p>Email: {{email}}</p>
                 <p>{{location.city}}</p>
                 <p>{{location.state}}</p>
                 {{/each}}
@@ -75,15 +75,19 @@
             </div>
         </div>
         <div class = "row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 saved-full-container">
+                <h3 id="saved-header">Saved Request</h3>
                 <div class="saved-container">
                     {{#if savedDashboardRequests}}
-                        <h3>Saved Requests</h3>
                         {{#each savedDashboardRequests}}
-                            <div class="your-requests">
-                                <h4>{{request.title}}</h4>
-                                <a href="api/request/{{request.id}}">View Request</a>
-                                <button data-id="{{id}}" class="unsave-req-btn">Unsave Request</button>
+                            <div class="saved-requests">
+                                <div class="saved-header-new">
+                                    <h4 id="saved-header-4">{{request.title}}</h4>
+                                </div>
+                                <div class="saved-buttons">
+                                    <a href="api/request/{{request.id}}">View Request</a>
+                                    <button data-id="{{id}}" class="unsave-req-btn">Unsave Request</button>
+                                </div>
                             </div>
                         {{/each}}
                     {{/if}}
