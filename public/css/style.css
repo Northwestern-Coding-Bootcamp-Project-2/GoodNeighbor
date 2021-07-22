@@ -55,9 +55,11 @@ p {
 /*===================
       NAVIGATION
 ====================*/
-
+nav{
+    background:var(--dark-green);
+}
 .navbar-items{
-    padding: 2rem 4rem 0rem 4rem;
+    padding: 0.5rem 4rem 0.5rem 4rem;
     width: 85%;
 }
 .navbar-brand{
@@ -309,6 +311,74 @@ hr:not([size]){
     text-decoration: none;
     background-color: var(--red);
 }
+.bottom-full-container{
+    padding: 0rem;
+}
+.bottom-container{
+    margin-top: 15rem;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: var(--dark-green);
+    position: relative;
+}
+.bottom-container::after{
+    content: "";
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.3;
+}
+.bottom-image-container{
+    display: flex;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0rem;
+}
+.bottom-image-container img{
+    width: 90%;
+}
+.bottom-title-container{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    top: 50%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+}
+.bottom-title-container h3{
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 6rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    padding: 0rem;
+    color: var(--white);
+    z-index: 3;
+}
+.bottom-title-container a{
+    padding: 1.2rem 5rem;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1.8rem;
+    border-radius: 5px;
+    align-self: center;
+    margin-top: 1.5rem;
+    z-index: 3;
+    opacity:1;
+}
+.bottom-title-container a:hover{
+    text-decoration: none;
+    background-color: var(--red);
+}
 /*======================
       LOGIN FORM 
 ======================*/
@@ -381,6 +451,10 @@ hr:not([size]){
 /*======================
         DASHBOARD
 ======================*/
+.account-full-container{
+    margin-top: 5rem;
+    padding-bottom: 4rem;
+}
 .dashboard-container{
     width: 85%;
 }
@@ -390,6 +464,7 @@ hr:not([size]){
 }
 .account-information{
     padding: 0rem 4rem;
+    font-size: 1.6rem;
 }
 .button-container{
     text-align:center;
@@ -404,21 +479,27 @@ hr:not([size]){
     margin: 0rem 4rem;
 }
 #make-request-btn{
-    background: var(--green);
+    background: var(--dark-green);
     color: var(--white);
+    font-size: 1.8rem;
 }
 #make-request-btn:hover{
     background: var(--yellow);
+    text-decoration: none;
+    border: none;
 }
 #search-request-btn{
     background: var(--red);
     color: var(--white);
+    font-size: 1.8rem;
 }
 #search-request-btn:hover{
     background: var(--yellow);
+    text-decoration: none;
+    border: none;
 }
 .request-container{
-    background: var(--orange);
+    border: .4rem solid var(--black);
     padding: 4rem;
     margin: 2rem 4rem;
     height: 30vh;
@@ -427,32 +508,74 @@ hr:not([size]){
     display: flex;
     justify-content: space-between;
     padding: 0.75rem 0rem;
-    border-bottom: 0.1rem solid #000;
+    border-bottom: 1px solid #000;
 }
 .your-requests h4{
     font-size: 2rem;
 }
 .your-requests a{
     padding: 0.7rem 4rem;
-    background: var(--green);
+    background: var(--orange);
     color: var(--white);
 }
 .your-requests a:hover{
     text-decoration: none;
-    background: var(--red);
+    background: var(--yellow);
 }
 #your-request-header{
     text-transform: uppercase;
     font-weight: 600;
     text-decoration: underline;
-    color: var(--dark-green);
+    color: var(--black);
     padding: 0rem 4rem;
+    margin-top: 4rem;
 } 
-.starred-container{
-    background: var(--green);
+.saved-full-container{
+    padding-bottom: 5rem;
+}
+.saved-container{
+    border: 0.4rem solid var(--black);
     padding: 4rem;
     margin: 2rem 4rem;
     height: 30vh;
+}
+.saved-requests{
+    display: flex;
+    padding: 0.75rem 0rem;
+    border-bottom: 1px solid #000;
+}
+#saved-header-4{
+    text-align: left !important;
+}
+.saved-buttons{
+    text-align: right;
+}
+.saved-buttons a{
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1.8rem;
+    border: none;
+    padding: 0.7rem 4rem;
+    margin-right: 2rem;
+}
+#saved-header{
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: underline;
+    color: var(--black);
+    padding: 0rem 4rem;
+    margin-top: 4rem;   
+}
+.saved-header-new{
+    display: flex;
+    flex:1;
+}
+.unsave-req-btn{
+    background: var(--red);
+    color: var(--white);
+    font-size: 1.8rem;
+    border: none;
+    padding: 0.9rem 4rem;
 }
 .starred-container h3{
     text-transform: uppercase;
@@ -475,6 +598,89 @@ hr:not([size]){
     width: 80%;
 }
 
+/*==========================
+    MAKE REQUEST FORM
+==========================*/
+#make-request-form label{
+    font-size: 1.8rem;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0.5rem;
+    color: var(--black);
+}
+#text{
+    padding-bottom: 50px;
+}
+#make-request-form select{
+    margin-top: 2rem;
+}
+#submit-request-btn{
+    margin-top: 2rem;
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1.8rem;
+    border: none;
+    padding: 0.5rem 0rem;
+}
+#submit-request-btn:hover{
+    background: var(--red);
+}
+#search-request-form{
+    margin-top: 3rem;
+    padding-bottom: 3rem;
+}
+#search-request-form select{
+    padding: 0.5rem 0.5rem;
+    width: 100%;
+}
+#submit-search-btn{
+    background: var(--orange);
+    color: var(--white);
+    font-size: 1.8rem;
+    border: none;
+    padding: 0.5rem 2rem;
+    width:100%;
+    margin-top: 1rem;
+}
+#submit-search-btn:hover{
+    background: var(--red);
+}
+
+/*========================
+        SINGLE REQUEST
+========================*/
+.single-request-container{
+    height: 90vh;
+}
+.single-request-container h4{
+    margin-top: 5rem;
+    font-size: 3.5rem;
+}
+.single-request-container p{
+    margin-top: 2rem;
+}
+.single-request-container button{
+    margin-top: 2rem;
+}
+.go-back-btn{
+    border: none;
+    font-size: 1.8rem;
+    color: var(--white);
+    background: var(--dark-green);
+    padding: 1rem 4rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+.save-req-btn{
+    margin-left: 4rem;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--white);
+    background: var(--orange);
+    padding: 1rem 4rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
 /*======================
         FOOTER
 ======================*/
@@ -485,7 +691,7 @@ footer{
     width: 100%;
     text-align: center;
     padding: 2rem;
-    background-color: var(--dark-green);
+    background-color:var(--dark-green);
 }
 footer p{
     color: var(--white);
