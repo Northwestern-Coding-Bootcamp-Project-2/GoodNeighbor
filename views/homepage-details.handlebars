@@ -21,22 +21,26 @@
 </div>
 <div class="container-fluid">
 <div class="row about-container">
-   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 about-text-container">
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 about-text-container">
       <div id="about-heading"><h2>Who are we?</h2><hr></div>
       <p>We are a team that wanted to make something different. An idea of being able to request services and get them done without having to pay money. What will happen instead is in exchange for a person helping you. You will exhange a service back as payment instead of using money. This will give everyone a chance to get services done like someone help mow the lawn or someone help changing your oil without having to pay money. If you have a certain skill the other party is looking for. You are then able to message each other through the app and come to a mutual agreement of exchange.</p>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 about-image-container">
-      <img src="../img/about-us.jpg">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 about-image-container">
+      <img id="about-image-company" src="../img/about-us.jpg">
     </div>
   </div>
   <div class="row offer-container">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offer-image-container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 offer-image-container">
       <img src="../img/working.jpg">
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offer-text-container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 offer-text-container">
       <div id="offer-heading"><h2>What do we offer?</h2><hr></div>
       <p>This app offers an exchange of services like helping someone fix the fence or helping change a tire without having to pay money for that service. We are a mutual aid service where you can request a service and someone can look through by the city and find your request. The other party can then message you through the app and both of you can come to a mutual agreement on the exhance of services that will happen. You can tell them the skills that you offer like if you are a graphic designer and you can make flyers and logos then you have that to offer to the other party.</p>
-      <a href="">Sign up today</a>
+      {{#if logged_in}}
+      <a href="/dashboard">Go to dashboard</a>
+      {{else}}
+      <a href="/signup">Sign up today</a>
+      {{/if}}
     </div>
   </div>
   </div>
@@ -46,7 +50,11 @@
           <img src="../img/helpinghand-2.jpg">
           <div class="bottom-title-container">
             <h3>Are you ready to try it?</h3>
-            <a href="/signup">Sign up today</a>
+            {{#if logged_in}}
+              <a href="/dashboard">Go to dashboard</a>
+            {{else}}
+              <a href="/signup">Sign up today</a>
+            {{/if}}
           </div>
         </div>
     </div>
