@@ -5,15 +5,16 @@
     {{#each recMsgData as |message|}}
    <div class="message-box">
        <h3>{{title}}</h3>
-       <p>{{user.username}}</p>
+       {{!-- <p>{{user.username}}</p> --}}
+       <button class="view-msg-btn">View Message</button>
    </div>
     {{/each}}
-    {{#each sentMsgData as |message|}}
+    {{!-- {{#each sentMsgData as |message|}}
    <div class="message-box">
        <h3>{{title}}</h3>
        <p>{{user.username}}</p>
    </div>
-    {{/each}}
+    {{/each}} --}}
 </div>
 
 <div class="container-lg">

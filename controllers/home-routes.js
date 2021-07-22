@@ -4,6 +4,8 @@ const withAuth = require('../utils/auth');
 const { Request, Message } = require('../models');
 const { SavedRequest } = require('../models');
 const { User } = require('../models');
+const sequelize = require('sequelize'); 
+const op = sequelize.Op;
 
 
 router.get('/', async (req, res) => {
@@ -31,17 +33,29 @@ router.get('/message', async (req, res) => {
     try{
         const receivedMsgRequestData = await Message.findAll({
             where: {recipient_id: req.session.user_id},
-            include: [User]
+            include: [
+                // {
+                    // model: 
+                    User,
+                //     where: {
+                //         id: {[op.col]: 'sender_id'}
+                //     },
+                //     required: true
+                // }
+            ]
         })
-        const sentMsgRequestData = await Message.findAll({
-            where: {sender_id: req.session.user_id},
-            include: [User]
-        })
+        // const sentMsgRequestData = await Message.findAll({
+        //     where: {sender_id: req.session.user_id},
+        //     include: [User]
+        // })
         const recMsgData = receivedMsgRequestData.map((dashboard) => dashboard.get ({plain: true }));
-        const sentMsgData = sentMsgRequestData.map((dashboard) => dashboard.get ({plain: true }));
+        // const sentMsgData = sentMsgRequestData.map((dashboard) => dashboard.get ({plain: true }));
+
+        console.log("This is the received message data: ", recMsgData);
+        // console.log("This is the sent message data: ", sentMsgData);
         res.render('messages', {
             recMsgData,
-            sentMsgData,
+            // sentMsgData,
             logged_in: req.session.logged_in
         });
     } catch (err) {
