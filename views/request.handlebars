@@ -7,6 +7,28 @@
                 <button class="go-back-btn" data-id= {{request.location_id}}>Nearby Requests</button>
                 <button class="save-req-btn" data-id= {{request.id}}>Save Request</button>
                 <button id="del-req-btn" data-id= {{request.id}}>Delete Request</button>
+                <div class="modal fade" id="request-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalToggleLabel">Request Form</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                 <form id="update-request-form">
+                                    <label for="title">Title</label><br>
+                                    <input type="text" id="title" name="title"><br>
+                                    <label for="text">Request Message:</label><br>
+                                    <input type="text" id="text" name="text"><br>
+                                    <label for="image-link">image link:</label><br>
+                                    <input type="text" id="image-link" name="image-link"><br>
+                                    <input type="submit" id="submit-update-btn" name="submit-update-btn" data-id="{{request.id}}" data-location={{request.location_id}}>
+                                </form> 
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a id="update-req-btn" class="btn btn-primary" data-bs-toggle="modal" href="#request-modal" role="button">Update Request</a>
                 <div class="modal fade" id="message-modal" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
                     <div class="modal-dialog">
                             <div class="modal-content">
