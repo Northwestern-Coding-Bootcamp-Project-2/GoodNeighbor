@@ -85,6 +85,7 @@ const unsaveRequestHandler = async (event) => {
     //   alert('Failed to save request')
     // }
     console.log('Request Unsaved!')
+    document.location.replace(`/dashboard`);
   } else {
     alert('Failed to save request');
   }
