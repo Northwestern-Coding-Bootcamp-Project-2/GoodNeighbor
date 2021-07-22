@@ -9,7 +9,7 @@ const { User } = require('../models');
 
 
 router.get('/', async (req, res) => {
-    try{
+    try {
         res.render('homepage-details', {
             logged_in: req.session.logged_in
         });
@@ -20,23 +20,29 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/login', async (req, res) => {
-    try{
-        res.render('login', {
-            logged_in: req.session.logged_in
-        });
+    try {
+        if (req.session.logged_in) {
+            req.session.destroy(() => {
+                res.status(204).end();
+            });
+        } else {
+            res.render('login', {
+                logged_in: req.session.logged_in
+            });
+        }
     } catch (err) {
         res.status(500).json(err);
     }
 });
 
 router.get('/message', async (req, res) => {
-    try{
+    try {
         const receivedMsgRequestData = await Message.findAll({
-            where: {recipient_id: req.session.user_id},
+            where: { recipient_id: req.session.user_id },
             include: [
                 // {
-                    // model: 
-                    User,
+                // model: 
+                User,
                 //     where: {
                 //         id: {[op.col]: 'sender_id'}
                 //     },
@@ -45,11 +51,11 @@ router.get('/message', async (req, res) => {
             ]
         })
         const sentMsgRequestData = await Message.findAll({
-            where: {sender_id: req.session.user_id},
+            where: { sender_id: req.session.user_id },
             include: [User]
         })
-        const recMsgData = receivedMsgRequestData.map((dashboard) => dashboard.get ({plain: true }));
-        const sentMsgData = sentMsgRequestData.map((dashboard) => dashboard.get ({plain: true }));
+        const recMsgData = receivedMsgRequestData.map((dashboard) => dashboard.get({ plain: true }));
+        const sentMsgData = sentMsgRequestData.map((dashboard) => dashboard.get({ plain: true }));
 
         console.log("This is the received message data: ", recMsgData);
         console.log("This is the sent message data: ", sentMsgData);
@@ -64,7 +70,7 @@ router.get('/message', async (req, res) => {
 });
 
 router.get('/signup', async (req, res) => {
-    try{
+    try {
         res.render('signup', {
             logged_in: req.session.logged_in
         });
@@ -75,27 +81,27 @@ router.get('/signup', async (req, res) => {
 
 //All new stuff here
 router.get('/dashboard', withAuth, async (req, res) => {
-        const currId = req.session.user_id;
-    try{
+    const currId = req.session.user_id;
+    try {
 
         const userRequestData = await User.findAll({
-            where: {id:req.session.user_id}
+            where: { id: req.session.user_id }
         })
 
-        const userData = userRequestData.map((dashboard) => dashboard.get ({plain: true }));
+        const userData = userRequestData.map((dashboard) => dashboard.get({ plain: true }));
 
         const dashboardRequestData = await Request.findAll({
-            where: {poster_id: currId},
+            where: { poster_id: currId },
         });
-        const dashboardRequests = dashboardRequestData.map((dashboard) => dashboard.get ({ plain: true }));
-        
+        const dashboardRequests = dashboardRequestData.map((dashboard) => dashboard.get({ plain: true }));
+
         const savedDashboardRequestData = await SavedRequest.findAll({
-            where: {user_id: currId},
+            where: { user_id: currId },
             include: [Request]
         });
-        
-        
-        const savedDashboardRequests = savedDashboardRequestData.map((dashboard) => dashboard.get ({ plain: true }));
+
+
+        const savedDashboardRequests = savedDashboardRequestData.map((dashboard) => dashboard.get({ plain: true }));
 
 
         res.render('dashboard', {
@@ -104,7 +110,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
             userData,
             logged_in: req.session.logged_in
         })
-    } catch (err){
+    } catch (err) {
         res.status(500).json(err);
     }
 });

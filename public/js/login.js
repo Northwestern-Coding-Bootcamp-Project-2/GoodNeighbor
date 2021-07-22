@@ -12,12 +12,16 @@ const loginFormHandler = async (event) => {
     });
     if (response.ok) {
       // If successful, redirect the browser to the homepage page
-      document.location.replace('/dashboard');
+      window.location.reload();
+      document.location.replace('/');
     } else {
       alert(response.statusText);
     }
   }
+  
 };
+
+
 document
 .querySelector('#login-submit')
 .addEventListener('click', loginFormHandler);
