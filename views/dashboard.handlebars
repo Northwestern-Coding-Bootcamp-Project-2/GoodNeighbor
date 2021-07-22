@@ -2,15 +2,15 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 account-full-container">
       <div class="account-container">
-        <img src="../img/person.jpg">
+        <img id="account-information-profile-image" src="../img/person.jpg">
         <div class="account-information">
             {{#each userData as |userData|}}
                 <p>Username: {{username}}</p>
-                <p>Email: {{email}}</p>
+                <p id="account-email">Email: {{email}}</p>
                 <p>{{location.city}}</p>
                 <p>{{location.state}}</p>
                 {{/each}}
-                <a href="/message">View Inbox</a>
+                <a id="account-message" href="/message">View Inbox</a>
                 </div>
             </div>
         </div>
@@ -64,6 +64,7 @@
         </div>
         <div class = "row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                {{#if dashboardRequests}}
                 <h3 id="your-request-header">Your Request</h3>
                 <div class="request-container">
                     {{#each dashboardRequests as |dashboardRequest|}}
@@ -73,13 +74,14 @@
                         </div>
                     {{/each}}
                 </div>
+                {{/if}}
             </div>
         </div>
         <div class = "row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 saved-full-container">
+               {{#if savedDashboardRequests}}
                 <h3 id="saved-header">Saved Request</h3>
                 <div class="saved-container">
-                    {{#if savedDashboardRequests}}
                         {{#each savedDashboardRequests}}
                             <div class="saved-requests">
                                 <div class="saved-header-new">
