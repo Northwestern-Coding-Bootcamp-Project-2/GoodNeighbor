@@ -1,7 +1,7 @@
 <div class="container-fluid">
 <div class="row hero-row">
 <div class="hero-container">
-    <div class="hero">
+    <div id="mobile-hero" class="hero">
         <img src="../img/pexels-william-fortunato-6140411-new.jpg">
           <div class="hero-tite-container">
             <h1 id="headline">good neighbor</h1>
@@ -21,22 +21,28 @@
 </div>
 <div class="container-fluid">
 <div class="row about-container">
-   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 about-text-container">
+   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 about-text-container">
       <div id="about-heading"><h2>Who are we?</h2><hr></div>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+      <p class="homepage-quotes">“In the long run the practice of solidarity proves much more advantageous to the species than the development of individuals endowed with predatory inclinations.” - Pyotr Kropotkin</p>
+      <p>Our team of designers and engineers wanted to benefit modern man, instead of engaging in "predatory inclinations." GoodNeighbor was designed with Kropotkin's words in mind; that we live and survive better as a species with compassion and community. Here, we can exchange our services amongst our community with the help of modern technology in a recognizable framework.</p>
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 about-image-container">
-      <img src="../img/about-us.jpg">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 about-image-container">
+      <img id="about-image-company" src="../img/about-us.jpg">
     </div>
   </div>
   <div class="row offer-container">
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offer-image-container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 offer-image-container">
       <img src="../img/working.jpg">
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offer-text-container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 offer-text-container">
       <div id="offer-heading"><h2>What do we offer?</h2><hr></div>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      <a href="">Sign up today</a>
+      <p class="homepage-quotes">“Practicing mutual aid is the surest means for giving each other and to all the greatest safety, the best guarantee of existence and progress, bodily, intellectual and moral.”</p>
+      <p>GoodNeighbor offers a digital space for our borader communities to interact, engage with, and provide for each other. Do you need your brakes changed? Your door fixed? Help building a fence? Generate a request and either wait for other members of the community to respond in your inbox, or search other requests in our city/town and message those community members to suggest an exchange.</p>
+      {{#if logged_in}}
+      <a href="/dashboard">Go to dashboard</a>
+      {{else}}
+      <a href="/signup">Sign up today</a>
+      {{/if}}
     </div>
   </div>
   </div>
@@ -46,7 +52,11 @@
           <img src="../img/helpinghand-2.jpg">
           <div class="bottom-title-container">
             <h3>Are you ready to try it?</h3>
-            <a href="/signup">Sign up today</a>
+            {{#if logged_in}}
+              <a href="/dashboard">Go to dashboard</a>
+            {{else}}
+              <a href="/signup">Sign up today</a>
+            {{/if}}
           </div>
         </div>
     </div>

@@ -121,7 +121,7 @@ nav{
     object-fit: cover;
 }
 #headline{
-    color: #fefefe;
+    color: var(--black);
     z-index: 3;
 }
 .hero-tite-container{
@@ -138,10 +138,8 @@ nav{
 }
 .hero-tite-container h1{
     font-weight: 500;
-    letter-spacing: 2px;
     font-size: 6rem;
     font-family: 'Pacifico', cursive;
-    letter-spacing: 2px;
     padding: 0rem 0rem 2rem 0rem;
 }
 .hero-btn-container{
@@ -159,7 +157,7 @@ nav{
 }
 .hero-btn-container a:hover{
     text-decoration: none;
-    background-color: var(--orange);
+    background-color: var(--yellow);
 }
 .hero-btn{
     border-radius: 4px;
@@ -211,11 +209,15 @@ nav{
     padding: 0rem 7rem;
     margin-top: 5rem;
 }
+.homepage-quotes{
+    font-style: italic;
+    font-size: 1.4rem;
+}
 #about-heading{
     display: flex;
 }
 hr{
-    width: 50%;
+    width: 40%;
     align-self: center;
     margin-left: 1.7rem;
     padding: 0.01rem 0rem;
@@ -312,7 +314,7 @@ hr:not([size]){
 }
 .offer-text-container a:hover{
     text-decoration: none;
-    background-color: var(--red);
+    background-color: var(--yellow);
 }
 .bottom-full-container{
     padding: 0rem;
@@ -382,7 +384,7 @@ hr:not([size]){
 }
 .bottom-title-container a:hover{
     text-decoration: none;
-    background-color: var(--red);
+    background-color: var(--yellow);
 }
 /*======================
       LOGIN FORM 
@@ -500,9 +502,25 @@ hr:not([size]){
     display: flex;
     padding: 4rem 4rem;
 }
+#account-information-profile-image{
+    border-radius: 0.4rem;
+}
 .account-information{
     padding: 0rem 4rem;
     font-size: 1.6rem;
+}
+#account-email{
+    padding-bottom: 2rem;
+}
+#account-message{
+    padding: 1rem 4rem;
+    background: var(--orange);
+    color: var(--white);
+    border-radius: 4px;
+}
+#account-message:hover{
+    text-decoration: none;
+    background: var(--yellow);
 }
 .button-container{
     text-align:center;
@@ -540,7 +558,8 @@ hr:not([size]){
     border: .4rem solid var(--black);
     padding: 4rem;
     margin: 2rem 4rem;
-    height: 30vh;
+    height: 40vh;
+    background: #fafafa;
 }
 .your-requests{
     display: flex;
@@ -556,6 +575,7 @@ hr:not([size]){
     padding: 0.7rem 4rem;
     background: var(--orange);
     color: var(--white);
+    border-radius: 0.4rem;
 }
 .your-requests a:hover{
     text-decoration: none;
@@ -576,7 +596,8 @@ hr:not([size]){
     border: 0.4rem solid var(--black);
     padding: 4rem;
     margin: 2rem 4rem;
-    height: 30vh;
+    height: 40vh;
+    background: #fafafa;
 }
 .saved-requests{
     display: flex;
@@ -598,6 +619,7 @@ hr:not([size]){
     border: none;
     padding: 0.7rem 4rem;
     margin-right: 2rem;
+    border-radius: 0.4rem;
 }
 .saved-buttons a:hover{
     background: var(--yellow);
@@ -622,6 +644,7 @@ hr:not([size]){
     font-size: 1.8rem;
     border: none;
     padding: 0.9rem 4rem;
+    border-radius: 0.4rem;
 }
 .unsave-req-btn:hover{
     background: var(--yellow);
@@ -670,6 +693,7 @@ hr:not([size]){
     font-size: 1.8rem;
     border: none;
     padding: 0.5rem 0rem;
+    border-radius: 0.4rem;
 }
 #submit-request-btn:hover{
     background: var(--red);
@@ -690,6 +714,7 @@ hr:not([size]){
     padding: 0.5rem 2rem;
     width:100%;
     margin-top: 1rem;
+    border-radius: 0.4rem;
 }
 #submit-search-btn:hover{
     background: var(--red);
@@ -719,6 +744,7 @@ hr:not([size]){
     padding: 1rem 4rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    border-radius: 0.4rem;
 }
 .go-back-btn:hover{
     background: var(--yellow);
@@ -732,10 +758,66 @@ hr:not([size]){
     padding: 1rem 4rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
+    border-radius: 0.4rem;
 }
 .save-req-btn:hover{
     background: var(--yellow);
 }
+
+/*=====================
+    MESSAGE PAGE
+======================*/
+.message-container{
+    height: 85vh;
+}
+#messages-header-new{
+    text-align: center;
+    margin-top: 4rem;
+}
+.message-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 5rem;
+    border-bottom: 1px solid var(--black);
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.view-msg-btn{
+    border: none;
+    border-radius: 0.4rem;
+    background: var(--orange);
+    color: var(--white);
+    padding: 0rem 4rem;
+}
+.view-msg-btn:hover{
+    background: var(--yellow);
+    text-decoration: none;
+}
+
+/*==========================
+    SINGLE MESSAGE PAGE
+==========================*/
+
+.single-message-container-new{
+    height: 85vh;
+}
+.single-message-container{
+    margin-top: 5rem;
+    padding: 0rem 5rem;
+}
+#del-msg-btn{
+    border: none;
+    border-radius: 0.4rem;
+    background: var(--orange);
+    color: var(--white);
+    padding: 1rem 4rem;
+}
+#del-msg-btn:hover{
+    background: var(--yellow);
+    text-decoration: none;
+}
+
 
 /*======================
      REQUEST PAGE
@@ -746,15 +828,21 @@ hr:not([size]){
         padding-bottom: 5rem;
     }
     .request-search-container h4{
-        margin-top: 5rem;
-        font-size: 3rem;
+        font-size: 2.5rem;
         font-family: 'Roboto', sans-serif;
         font-weight: 500;
     }
     .request-search-container p{
         font-size: 1.8rem;
         font-family: 'Roboto', sans-serif;
-        font-weight: 300;
+        font-weight: 400;
+    }
+    .location-request-container{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5rem;
+        padding: 2rem 0rem;
+        border-bottom: 1px solid #000;
     }
     .view-req-btn{
     border: none;
@@ -768,6 +856,17 @@ hr:not([size]){
     .view-req-btn:hover{
         background: var(--red);
     }
+    #del-req-btn{
+    border: none;
+    font-size: 1.8rem;
+    color: var(--white);
+    background: var(--red);
+    padding: 1rem 4rem;
+    margin-left: 3.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    border-radius: 0.4rem;
+    }
 
 /*======================
   SEND MESSAGE CSS
@@ -780,8 +879,9 @@ hr:not([size]){
     padding: 0.75rem 4rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
-    border-radius: 0;
+    border-radius: 0.4rem;
     margin-left: 5rem;
+    margin-top: -5px;
 }
 #send-msg-btn:hover{
     background: var(--orange);
@@ -810,4 +910,192 @@ footer p{
     letter-spacing: 1px;
     text-transform: uppercase;
     padding-top: 1rem;
+}
+
+/*==========================
+        MEDIA QUERIES
+==========================*/
+
+@media screen and (max-width: 1625px) {
+    .button-container a{
+        padding: 1rem 10rem;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .button-container a{
+        padding: 1rem 5rem;
+    }
+    .custom-toggler.navbar-toggler {
+        border: .1rem solid var(--white);
+        color:#fff;
+    }
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .message-box{
+        flex-direction: column;
+    }
+    .view-msg-btn{
+        padding: 1rem 0rem;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button-container a{
+        padding: 1rem 2rem;
+    }
+    .message-box{
+        flex-direction: column;
+    }
+    .view-msg-btn{
+        padding: 1rem 0rem;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #mobile-hero{
+        height: auto !important;
+        width: 100% !important;
+    }
+    #headline{
+        color: var(--white);
+    }
+    .hero-tite-container{
+        top: 20%;
+    }
+    .slider {
+        height: 34vh !important;
+    }
+    .hero-row{
+        height: 25vh !important;
+    }
+    .hero-container{
+        height: 25vh !important;
+    }
+    hr{
+        display: none;
+    }
+    .about-text-container p{
+        padding-bottom: 2rem;
+    }
+    .bottom-container{
+        margin-top: 10rem;
+    }
+    .bottom-image-container{
+        height: 15vh;
+    }
+    .bottom-title-container{
+        top: 13%;
+    }
+    .bottom-title-container h3{
+        font-size: 3rem;
+    }
+    .custom-toggler.navbar-toggler {
+        border: .1rem solid var(--white);
+        color:#fff;
+    }
+    .custom-toggler .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+    /*=============================
+            DASHBOARD
+    =============================*/
+    .account-container{
+        flex-direction: column;
+    }
+    .account-full-container{
+        padding-bottom: 0rem;
+    }
+    .account-information{
+        padding: 2rem 0rem 0rem 0rem;
+    }
+    .button-container{
+        padding: 0rem;
+        margin: 0rem;
+    }
+    .button-container a{
+        margin: 1rem 0rem;
+        padding: 1rem 10rem;
+        border-radius: 0.4rem;
+    }
+    .your-requests{
+        flex-direction: column;
+    }
+    .your-requests a{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0.75rem 2rem;
+    }
+    #saved-header-4{
+        padding-bottom: 3rem;
+    }
+    .saved-requests{
+        flex-direction: column;
+    }
+    .saved-buttons a{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0.75rem 2rem;
+    }
+    .unsave-req-btn{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        padding: 0.75rem 2rem;
+    }
+    /*=======================
+        LOCATION REQUEST
+    =======================*/
+
+    .location-request-container{
+        flex-direction: column;
+    }
+    .request-search-container h4{
+        padding-bottom: 0.5rem;
+    }
+    .request-search-container p{
+        padding-bottom: 0.5rem;
+    }
+    .view-req-btn{
+        border-radius: 0.4rem;
+    }
+
+    /*=======================
+        REQUEST PAGE
+    ========================*/
+
+    .single-request-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .single-request-container h4{
+        font-size: 3rem;
+    }
+    .save-req-btn{
+        margin-left: 0rem;
+        margin-bottom: 2rem;
+    }
+    #send-msg-btn{
+        margin-left: 0rem;
+    }
+    #del-req-btn{
+        margin: 0rem 0rem 2rem 0rem;
+    }
+
+    /*=========================
+            MESSAGES
+    =========================*/
+
+    .message-box{
+        flex-direction: column;
+    }
+    .view-msg-btn{
+        padding: 1rem 0rem;
+        margin-top: 2rem;
+    }
 }

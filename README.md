@@ -19,6 +19,8 @@ Good Neighbor is a community-driven service exchange app built with express, seq
 ## Installation ⌨️ 
 ---
 To use the app on your local machine with dummy data, clone the repository and run npm i-y and make a .env file with the relevant values so the app can communicate with your MySQL database (goodneighbor_db). Run npm run seed to seed the database with the dummy data, then npm start to start the app. ⌨️
+
+(or go to Heroku! https://thegoodneighbor.herokuapp.com/)
   
 ## Usage 🖥️ 
 ---
@@ -30,8 +32,20 @@ Kenny Cheng, Kyaah Ellis, Rudie G (Rauol Moore), and Ryan Hillier 📜
   
 ## Screenshot 📸 
 ---
-undefined
-<img alt="" src="" width="150" height="150"> |
+Dashboard
+<img alt="dashboard-screenshot" src="./public/img/dashboard-GN.png"> |
+<br />
+<br />
+Homepage
+<img alt="homepage-screenshot" src="./public/img/homepage-GN.jpg"> |
+<br />
+<br />
+View Request
+<img alt="viewrequest-screenshot" src="./public/img/viewrequest-GN.png"> |
+<br />
+<br />
+Search Request
+<img alt="searchrequest-screenshot" src="./public/img/saerchrequest-GN.png"> |
 <br />
 <br />
 
@@ -40,8 +54,19 @@ undefined
 <br />
 GitHub: https://github.com/rudie-g
 <br />
-<br />
 Email: rauoldm@gmail.com
+<br />
+GitHub: https://github.com/itskchengs
+<br />
+Email: itskcheng@gmail.com
+<br />
+GitHub: https://github.com/KyaahB
+<br />
+Email: kyaahellis2021@u.northwestern.edu
+<br />
+GitHub: https://github.com/Ryan1992186
+<br />
+Email: ryan1992186@gmail.com
 <br />
 <br />
 

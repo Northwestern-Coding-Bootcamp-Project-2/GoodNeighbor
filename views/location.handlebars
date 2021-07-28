@@ -3,9 +3,11 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="request-search-container">
                 {{#each location as |request|}}
-                <h4>{{request.title}}</h4>
-                <p>{{request.text}}</p>
-                <button class="view-req-btn" data-id= {{request.id}}>View Request</button>
+                <div class="location-request-container">
+                  <h4>Title: {{request.title}}</h4>
+                  <p>Description: {{request.text}}</p>
+                  <button class="view-req-btn" data-id= {{request.id}}>View Request</button>
+                </div>
                 {{/each}}
             </div>
     </div>
