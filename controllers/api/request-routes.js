@@ -61,8 +61,8 @@ try {
 router.put('/:id', withAuth, async (req, res) => {
     try {
       const newRequest = await Request.update(
+        req.body,
         {
-          ...req.body,
           where: {
             id:  req.params.id,
           }
