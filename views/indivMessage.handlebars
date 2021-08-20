@@ -1,6 +1,9 @@
   <div class="row single-message-container-new">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
             <div class="single-message-container">
+                {{#if image_link}}
+                    <img id="message-image" src={{image_link}} alt="message image">
+                {{/if}} 
                 <h4>Title: {{title}}</h4>
                 <p>Message: {{text}}</p>
                 <button id="del-msg-btn" data-id={{id}}>Delete Message</button>

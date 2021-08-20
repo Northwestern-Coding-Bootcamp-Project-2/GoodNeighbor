@@ -2,7 +2,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const { Message } = require('../../models');
-const { StarredRequest } = require('../../models');
+const { SavedRequest } = require('../../models');
 const { Request } = require('../../models');
 const withAuth = require('../../utils/auth');
 
@@ -13,7 +13,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
 
-            include: [{ model: Message }, { model: Request }, { model: StarredRequest }]
+            include: [{ model: Message }, { model: Request }, { model: SavedRequest }]
         });
 
         const user = userData.get({ plain: true });
