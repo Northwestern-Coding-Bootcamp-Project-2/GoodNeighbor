@@ -109,6 +109,16 @@ const updateReqHandler = async (event) => {
   }
 }
 
+const currId = document.querySelector("#update-req-btn").getAttribute("data-user");
+const reqId = document.querySelector("#update-req-btn").getAttribute("data-id");
+const reqBtn = document.querySelector("#update-req-btn");
+const delBtn = document.querySelector("#del-req-btn");
+
+if (reqId !== currId) {
+  reqBtn.style.display = "none";
+  delBtn.style.display = "none";
+} 
+
 document
   .querySelector('#submit-update-btn').addEventListener('click', updateReqHandler);
 

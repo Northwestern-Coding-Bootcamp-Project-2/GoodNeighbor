@@ -2,9 +2,14 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 account-full-container">
       <div class="account-container">
-        <img id="account-information-profile-image" src="../img/person.jpg">
         <div class="account-information">
             {{#each userData as |userData|}}
+                {{#if image_link}}
+                    <img id="account-information-profile-image" src={{image_link}} alt="user profile picture">
+                {{/if}}
+                {{!-- {{#if !image_link}}
+                    <img id="account-information-profile-image" src="../img/person.jpg" alt="stand-in profile picture">
+                {{/if}} --}}
                 <p>Username: {{username}}</p>
                 <p id="account-email">Email: {{email}}</p>
                 <p>{{location.city}}</p>

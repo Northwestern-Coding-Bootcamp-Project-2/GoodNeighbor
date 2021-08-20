@@ -37,6 +37,10 @@ User.init(
         key: 'id',
       },
     },
+    image_link: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    }
   },
   {
     hooks: {

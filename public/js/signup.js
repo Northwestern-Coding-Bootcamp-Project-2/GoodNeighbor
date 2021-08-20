@@ -29,6 +29,7 @@ const signupFormHandler = async (event) => {
   const username = document.querySelector('#username').value.trim();
   const email = document.querySelector('#email').value.trim();
   const password = document.querySelector('#password').value.trim();
+  const image_link = document.querySelector('#image_link').value.trim();
   const location_id = dropDown.options[dropDown.selectedIndex].getAttribute('data-id');
   console.log(location_id);
   /*
@@ -41,7 +42,7 @@ const signupFormHandler = async (event) => {
   if (username && email && password) {
     const response = await fetch('/api/signup', {
       method: 'POST',
-      body: JSON.stringify({ username, email, password, location_id}),
+      body: JSON.stringify({ username, email, password, location_id, image_link}),
       headers: { 'Content-Type': 'application/json' },
     });
   
