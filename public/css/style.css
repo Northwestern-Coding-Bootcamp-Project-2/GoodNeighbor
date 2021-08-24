@@ -311,6 +311,7 @@ hr:not([size]){
     align-self: flex-start;
     margin-top: 1.5rem;
     text-transform: uppercase;
+    font-weight: 600;
 }
 .offer-text-container a:hover{
     text-decoration: none;
@@ -338,7 +339,7 @@ hr:not([size]){
 }
 .bottom-image-container{
     display: flex;
-    height: 60vh;
+    height: 100%;;
     width:100%;
     justify-content: center;
     align-items: center;
@@ -363,7 +364,7 @@ hr:not([size]){
 .bottom-title-container h3{
     font-weight: 500;
     letter-spacing: 2px;
-    font-size: 6rem;
+    font-size: 4.5rem;
     font-family: 'Pacifico', cursive;
     letter-spacing: 2px;
     padding: 0rem 0rem 2rem 0rem;
@@ -381,6 +382,7 @@ hr:not([size]){
     z-index: 3;
     opacity:1;
     text-transform: uppercase;
+    font-weight: 600;
 }
 .bottom-title-container a:hover{
     text-decoration: none;
@@ -407,26 +409,27 @@ hr:not([size]){
     text-transform: uppercase;
 }
 #login-form label{
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-top: 1rem;
 }
 #login-form input{
     width: 100%;
     height: auto;
-    border: 1px solid var(--black);
+    border: 1.5px solid var(--black);
     opacity: 0.5;
-    padding: 0.5rem 0rem;
+    padding: 1rem 1.5rem;
 }
 #login-submit{
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin-top: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     padding: .5rem 5rem;
     border: none !important;
     background-color: var(--orange);
     color: var(--white);
     opacity: 1 !important;
     margin-top: 2rem;
+    border-radius: 0.2rem;
 }
 #login-submit:hover{
     background: var(--yellow);
@@ -454,8 +457,13 @@ hr:not([size]){
     text-align: center;
     text-transform: uppercase;
 }
-#sign-form label{
-    font-size: 1.8rem;
+#signup-form{
+    width: 90%; 
+    margin-left: auto;
+    margin-right: auto;
+}
+#signup-form label{
+    font-size: 2rem;
     margin-top: 1rem;
 }
 #signup-form input{
@@ -463,7 +471,7 @@ hr:not([size]){
     height: auto;
     border: 1px solid var(--black);
     opacity: 0.5;
-    padding: 0.5rem 0rem;
+    padding: 1rem 1.5rem;
 }
 #signup-form select{
     width: 100%;
@@ -474,9 +482,9 @@ hr:not([size]){
     padding-right: 0rem;
 }
 #signup-submit{
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin-top: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     padding: 1rem 5rem !important;
     border: none !important;
     background-color: var(--orange);
@@ -508,6 +516,9 @@ hr:not([size]){
 .account-information{
     padding: 0rem 4rem;
     font-size: 1.6rem;
+}
+.account-information p{
+    font-size: 2rem;
 }
 #account-email{
     padding-bottom: 2rem;
@@ -725,6 +736,7 @@ hr:not([size]){
 ========================*/
 .single-request-container{
     height: 90vh;
+    padding-top: 5rem;
 }
 .single-request-container h4{
     margin-top: 5rem;
@@ -867,6 +879,15 @@ hr:not([size]){
     font-weight: 300;
     border-radius: 0.4rem;
     }
+    #update-req-btn{
+        border: none;
+        font-size: 1.8rem;
+        padding: 1rem 4rem;
+        margin-left: 3.5rem;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        border-radius: 0.4rem;
+    }
 
 /*======================
   SEND MESSAGE CSS
@@ -922,6 +943,12 @@ footer p{
     }
 }
 
+@media screen and (max-width: 1368px){
+    #offer-heading h2{
+        font-size: 3rem;
+    }
+}
+
 @media screen and (max-width: 1150px) {
     .button-container a{
         padding: 1rem 5rem;
@@ -956,6 +983,12 @@ footer p{
         padding: 1rem 0rem;
         margin-top: 2rem;
     }
+    .bottom-image-container{
+        height: 100%;
+    }
+    .bottom-title-container{
+        top: 20%;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -988,7 +1021,7 @@ footer p{
         margin-top: 10rem;
     }
     .bottom-image-container{
-        height: 15vh;
+        height: 20vh;
     }
     .bottom-title-container{
         top: 13%;
@@ -1015,6 +1048,12 @@ footer p{
     .account-information{
         padding: 2rem 0rem 0rem 0rem;
     }
+    #make-request-btn{
+        font-size: 1.6rem;
+    }
+    #search-request-btn{
+        font-size: 1.6rem;
+    }
     .button-container{
         padding: 0rem;
         margin: 0rem;
@@ -1026,27 +1065,45 @@ footer p{
     }
     .your-requests{
         flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
     .your-requests a{
         margin-top: 1rem;
         margin-bottom: 1rem;
-        padding: 0.75rem 2rem;
+        padding: 0.75rem 0rem;
+        width: 60%;
+        text-align: center;
+    }
+    .request-container{
+        margin: 4rem 0rem;
+        padding: 2rem 0rem;
+    }
+    .saved-container{
+        margin: 4rem 0rem;
+        padding: 2rem 0rem;
     }
     #saved-header-4{
         padding-bottom: 3rem;
     }
     .saved-requests{
         flex-direction: column;
+        align-items: center;
+    }
+    .saved-buttons{
+        display: flex;
     }
     .saved-buttons a{
         margin-top: 1rem;
         margin-bottom: 1rem;
         padding: 0.75rem 2rem;
+        font-size: 1.4rem;
     }
     .unsave-req-btn{
         margin-top: 1rem;
         margin-bottom: 1rem;
         padding: 0.75rem 2rem;
+        font-size: 1.4rem;
     }
     /*=======================
         LOCATION REQUEST
@@ -1079,6 +1136,10 @@ footer p{
     .save-req-btn{
         margin-left: 0rem;
         margin-bottom: 2rem;
+    }
+    #update-req-btn{
+        margin-left: 0rem;
+        margin-bottom: 2.5rem;
     }
     #send-msg-btn{
         margin-left: 0rem;
