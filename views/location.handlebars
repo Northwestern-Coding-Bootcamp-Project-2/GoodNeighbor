@@ -4,8 +4,8 @@
             <div class="request-search-container">
                 {{#each location as |request|}}
                 <div class="location-request-container">
-                  <h4>Title: {{request.title}}</h4>
-                  <p>Description: {{request.text}}</p>
+                  <h4>{{request.title}}</h4>
+                  <p>{{request.text}}</p>
                   <button class="view-req-btn" data-id= {{request.id}}>View Request</button>
                 </div>
                 {{/each}}
